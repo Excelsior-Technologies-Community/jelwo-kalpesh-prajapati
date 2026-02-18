@@ -1,0 +1,9 @@
+body {
+    /* Sets base size to 16px for better readability */
+    font-size: 16px; 
+    /* Modern sans-serif stack */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
