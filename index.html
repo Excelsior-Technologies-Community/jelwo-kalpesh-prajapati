@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    
+
     <title>Jelwo</title>
 </head>
 
@@ -312,66 +312,95 @@
                                     </div>
 
                                     <div class="col-span-4 space-y-6">
-    <div class="flex items-center justify-between">
-        <h3 class="font-bold text-gray-900 text-[15px]">Popular collection</h3>
-        <div class="flex space-x-2">
-            <button id="prevBtn" class="p-1 border border-gray-200 hover:bg-gray-100 rounded-sm text-gray-400">
-                <i class="fa-solid fa-arrow-left text-xs"></i>
-            </button>
-            <button id="nextBtn" class="p-1 border border-gray-200 hover:bg-gray-100 rounded-sm text-gray-400">
-                <i class="fa-solid fa-arrow-right text-xs"></i>
-            </button>
-        </div>
-    </div>
+                                        <div class="flex items-center justify-between">
+                                            <h3 class="font-bold text-gray-900 text-[15px]">Popular collection</h3>
+                                            <div class="flex space-x-2">
+                                                <button id="prevBtn"
+                                                    class="p-1 border border-gray-200 hover:bg-gray-100 rounded-sm text-gray-400">
+                                                    <i class="fa-solid fa-arrow-left text-xs"></i>
+                                                </button>
+                                                <button id="nextBtn"
+                                                    class="p-1 border border-gray-200 hover:bg-gray-100 rounded-sm text-gray-400">
+                                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                                </button>
+                                            </div>
+                                        </div>
 
-    <div class="relative overflow-hidden">
-        <div id="product-slider" class="flex transition-transform duration-300 ease-in-out gap-4">
-            
-            <div class="min-w-[calc(50%-8px)] text-center group/prod">
-                <div class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
-                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300" class="w-full h-full object-contain" />
-                    <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">20%</span>
-                </div>
-                <div class="mt-4 space-y-1">
-                    <p class="text-[13px] text-gray-600 font-medium">Rs. 28.00 <span class="text-gray-400 line-through ml-1 text-[12px]">Rs. 35.00</span></p>
-                </div>
-            </div>
+                                        <div class="relative overflow-hidden">
+                                            <div id="product-slider"
+                                                class="flex transition-transform duration-300 ease-in-out gap-4">
 
-            <div class="min-w-[calc(50%-8px)] text-center group/prod">
-                <div class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
-                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300" class="w-full h-full object-contain" />
-                    <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">56%</span>
-                </div>
-                <div class="mt-4 space-y-1">
-                    <p class="text-[13px] text-gray-600 font-medium">From Rs. 17.00 <span class="text-gray-400 line-through ml-1 text-[12px]">Rs. 39.00</span></p>
-                </div>
-            </div>
+                                                <div class="min-w-[calc(50%-8px)] text-center group/prod">
+                                                    <div
+                                                        class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
+                                                        <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300"
+                                                            class="w-full h-full object-contain" />
+                                                        <span
+                                                            class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">20%</span>
+                                                    </div>
+                                                    <div class="mt-4 space-y-1">
+                                                        <p class="text-[13px] text-gray-600 font-medium">Rs. 28.00 <span
+                                                                class="text-gray-400 line-through ml-1 text-[12px]">Rs.
+                                                                35.00</span></p>
+                                                    </div>
+                                                </div>
 
-            <div class="min-w-[calc(50%-8px)] text-center group/prod">
-                <div class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
-                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300" class="w-full h-full object-contain" />
-                    <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">56%</span>
-                </div>
-                <div class="mt-4 space-y-1">
-                    <p class="text-[13px] text-gray-600 font-medium">From Rs. 17.00 <span class="text-gray-400 line-through ml-1 text-[12px]">Rs. 39.00</span></p>
-                </div>
-            </div>
+                                                <div class="min-w-[calc(50%-8px)] text-center group/prod">
+                                                    <div
+                                                        class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
+                                                        <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300"
+                                                            class="w-full h-full object-contain" />
+                                                        <span
+                                                            class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">56%</span>
+                                                    </div>
+                                                    <div class="mt-4 space-y-1">
+                                                        <p class="text-[13px] text-gray-600 font-medium">From Rs. 17.00
+                                                            <span
+                                                                class="text-gray-400 line-through ml-1 text-[12px]">Rs.
+                                                                39.00</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
 
-            <div class="min-w-[calc(50%-8px)] text-center group/prod">
-                <div class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
-                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300" class="w-full h-full object-contain" />
-                    <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">56%</span>
-                </div>
-                <div class="mt-4 space-y-1">
-                    <p class="text-[13px] text-gray-600 font-medium">From Rs. 17.00 <span class="text-gray-400 line-through ml-1 text-[12px]">Rs. 39.00</span></p>
-                </div>
-            </div>
+                                                <div class="min-w-[calc(50%-8px)] text-center group/prod">
+                                                    <div
+                                                        class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
+                                                        <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300"
+                                                            class="w-full h-full object-contain" />
+                                                        <span
+                                                            class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">56%</span>
+                                                    </div>
+                                                    <div class="mt-4 space-y-1">
+                                                        <p class="text-[13px] text-gray-600 font-medium">From Rs. 17.00
+                                                            <span
+                                                                class="text-gray-400 line-through ml-1 text-[12px]">Rs.
+                                                                39.00</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
 
-        </div>
-    </div>
-</div>
+                                                <div class="min-w-[calc(50%-8px)] text-center group/prod">
+                                                    <div
+                                                        class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
+                                                        <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300"
+                                                            class="w-full h-full object-contain" />
+                                                        <span
+                                                            class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">56%</span>
+                                                    </div>
+                                                    <div class="mt-4 space-y-1">
+                                                        <p class="text-[13px] text-gray-600 font-medium">From Rs. 17.00
+                                                            <span
+                                                                class="text-gray-400 line-through ml-1 text-[12px]">Rs.
+                                                                39.00</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
 
-                                    
+                                            </div>
+                                        </div>
+                                    </div>
+
+
 
                                 </div>
                             </div>
@@ -382,32 +411,49 @@
                     <a href="#"
                         class="hover:text-amber-700 transition-colors uppercase tracking-wide text-[13px] font-semibold">Blog</a>
                     <div class="relative group inline-block">
-    <a href="#" class="flex items-center hover:text-amber-700 transition-colors uppercase tracking-wide text-[13px] font-semibold border-b-2 border-transparent hover:border-amber-700 pb-1">
-        Pages
-        <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
-    </a>
+                        <a href="#"
+                            class="flex items-center hover:text-amber-700 transition-colors uppercase tracking-wide text-[13px] font-semibold border-b-2 border-transparent hover:border-amber-700 pb-1">
+                            Pages
+                            <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+                        </a>
 
-    <div class="absolute left-0 top-full w-64 bg-white shadow-xl border border-gray-100 py-2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-        <ul class="flex flex-col">
-            <li>
-                <a href="#" class="flex items-center justify-between px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50 transition-colors group/item">
-                    About us <i class="fa-solid fa-chevron-right text-[10px] text-gray-400 group-hover/item:text-amber-700"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center justify-between px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50 transition-colors group/item">
-                    Contact <i class="fa-solid fa-chevron-right text-[10px] text-gray-400 group-hover/item:text-amber-700"></i>
-                </a>
-            </li>
-            <li><a href="#" class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Faq's</a></li>
-            <li><a href="#" class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Privacy policy</a></li>
-            <li><a href="#" class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Refund policy</a></li>
-            <li><a href="#" class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Store location</a></li>
-            <li><a href="#" class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Shipping & return</a></li>
-            <li><a href="#" class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50 border-b-0">Terms & condition</a></li>
-        </ul>
-    </div>
-</div>
+                        <div
+                            class="absolute left-0 top-full w-64 bg-white shadow-xl border border-gray-100 py-2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <ul class="flex flex-col">
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-between px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50 transition-colors group/item">
+                                        About us <i
+                                            class="fa-solid fa-chevron-right text-[10px] text-gray-400 group-hover/item:text-amber-700"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-between px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50 transition-colors group/item">
+                                        Contact <i
+                                            class="fa-solid fa-chevron-right text-[10px] text-gray-400 group-hover/item:text-amber-700"></i>
+                                    </a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Faq's</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Privacy
+                                        policy</a></li>
+                                <li><a href="#"
+                                        class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Refund
+                                        policy</a></li>
+                                <li><a href="#" class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Store
+                                        location</a></li>
+                                <li><a href="#"
+                                        class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Shipping &
+                                        return</a></li>
+                                <li><a href="#"
+                                        class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50 border-b-0">Terms
+                                        & condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
                 </nav>
                 <div class="flex items-center space-x-2 text-gray-700">
@@ -423,7 +469,7 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
