@@ -61,3 +61,4 @@ const swiper = new Swiper('.main-jewelry-carousel', {
         clickable: true,
     },
 });
+
