@@ -36,6 +36,10 @@ prevBtn.addEventListener('click', () => {
 // Initialize button state
 updateSlider();
 
+
+
+
+
 const swiper = new Swiper('.main-jewelry-carousel', {
     loop: true,
     speed: 1200,
