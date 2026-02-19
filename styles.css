@@ -7,3 +7,23 @@ body {
     color: #333;
     -webkit-font-smoothing: antialiased;
 }
+
+    /* Navigation Arrows - Specific sizing and centering */
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-weight: bold;
+  }
+
+  /* Theme-colored Pagination Dots */
+  .swiper-pagination-bullet {
+    background: #ff6200 !important; /* Matches your theme color */
+    opacity: 1.4;
+    width: 10px;
+    height: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #a77f66 !important;
+    opacity: 1;
+    transform: scale(1.3);
+  }
