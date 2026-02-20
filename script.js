@@ -66,3 +66,30 @@ const swiper = new Swiper('.main-jewelry-carousel', {
     },
 });
 
+// Timer For section
+const targetDate = new Date("march 31, 2026 23:59:59").getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const gap = targetDate - now;
+
+            // Math for time units
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            const d = Math.floor(gap / day);
+            const h = Math.floor((gap % day) / hour);
+            const m = Math.floor((gap % hour) / minute);
+            const s = Math.floor((gap % minute) / second);
+
+            // Update every card at once
+            document.querySelectorAll('.js-days').forEach(el => el.innerText = d);
+            document.querySelectorAll('.js-hours').forEach(el => el.innerText = h);
+            document.querySelectorAll('.js-mins').forEach(el => el.innerText = m);
+            document.querySelectorAll('.js-secs').forEach(el => el.innerText = s);
+        };
+
+        setInterval(updateCountdown, 1000);
+
