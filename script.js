@@ -39,31 +39,35 @@ updateSlider();
 
 
 
-
-const swiper = new Swiper('.main-jewelry-carousel', {
+const mainSwiper = new Swiper('.main-jewelry-carousel', {
     loop: true,
     speed: 1200,
-    grabCursor: true, // Enables dragging with mouse
-    keyboard: {
-        enabled: true, // Enables Arrow keys
-    },
-    effect: 'slide', // Smooth cross-fade between background images
+    grabCursor: true,
+    keyboard: { enabled: true },
+    effect: 'slide',
+
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
     },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
+
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
+});
+
+
+const categorySwiper = new Swiper(".categorySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    grabCursor: true,
+    freeMode: true,
 });
 
 // Timer For section
@@ -92,4 +96,8 @@ const targetDate = new Date("march 31, 2026 23:59:59").getTime();
         };
 
         setInterval(updateCountdown, 1000);
+
+
+
+        
 
