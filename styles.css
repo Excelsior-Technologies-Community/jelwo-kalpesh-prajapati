@@ -21,47 +21,22 @@ body {
     width: 33.333% !important;
   }
 
-  /* 1. Hide the checkbox visually */
-.hidden-trigger {
-  display: none;
-}
+    /* Show modal when checkbox is checked */
+    .video-checkbox:checked ~ .video-modal {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
-/* 2. Style the Modal (Hidden by default) */
-.video-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
+    /* Scale up the video content when modal opens */
+    .video-checkbox:checked ~ .video-modal .relative {
+        transform: scale(1);
+    }
 
-.modal-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-}
+    /* Prevent scrolling when modal is open (Optional but recommended) */
+    body:has(.video-checkbox:checked) {
+        overflow: hidden;
+    }
 
-.modal-content {
-  position: relative;
-  width: 90%;
-  max-width: 800px;
-  aspect-ratio: 16 / 9;
-  background: #000;
-  z-index: 101;
-}
-
-.close-btn {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-}
 
 /* 3. The "Pop-up" Trigger Logic */
 .hidden-trigger:checked ~ .video-modal {
