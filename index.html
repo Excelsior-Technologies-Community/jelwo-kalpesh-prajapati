@@ -1103,21 +1103,21 @@
 
 
     <!-- Promotional Hero Banner -->
-    <section class="flex flex-col lg:flex-row gap-6 p-6 bg-white">
-        <div class="flex flex-col lg:flex-row gap-6 p-6 bg-white w-full">
+    <section class="p-6 bg-white">
+        <div class="flex flex-col lg:flex-row gap-6 w-full max-w-7xl mx-auto">
 
-            <div class="relative flex-[2] overflow-hidden rounded-sm group">
+            <div class="relative flex-[2] min-h-[400px] md:min-h-[500px] overflow-hidden rounded-sm group">
                 <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-banner-3.jpg?v=1742624026&width=1024"
-                    alt="Jewelry Banner" class="w-full h-full object-cover" />
+                    alt="Jewelry Banner" class="absolute inset-0 w-full h-full object-cover " />
 
-                <div class="absolute inset-0 flex items-center justify-end pr-8 md:pr-16 lg:pr-24">
+                <div class="absolute inset-0 flex items-center justify-end p-8 md:p-16 lg:p-20 bg-black/5">
                     <div class="max-w-xs md:max-w-sm text-left">
                         <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-[#222222] leading-tight mb-4">
                             Unleash your <br> inner shine
                         </h2>
                         <p class="text-[#808080] text-sm md:text-base mb-8 leading-relaxed">
                             It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout.
+                            page.
                         </p>
                         <a href="#"
                             class="inline-block bg-[#A6866E] text-white px-10 py-3 rounded-full uppercase text-xs font-bold tracking-[0.2em] shadow-lg hover:bg-black transition-all transform hover:-translate-y-1">
@@ -1127,35 +1127,42 @@
                 </div>
             </div>
 
-            <input type="checkbox" id="video-toggle" class="hidden-trigger">
+            <input type="checkbox" id="video-toggle" class="video-checkbox hidden">
 
             <div class="relative flex-1 overflow-hidden rounded-sm group min-h-[350px]">
                 <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-video-banner.jpg?v=1742625158&width=800"
-                    alt="Model wearing necklace" class="w-full h-full object-cover " />
+                    alt="Model wearing necklace" class="absolute inset-0 w-full h-full object-cover" />
 
-                <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                    class="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/20">
                     <label for="video-toggle"
-                        class="cursor-pointer relative w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110">
+                        class="cursor-pointer relative w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95">
                         <svg class="w-8 h-8 text-[#222222] ml-1" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z" />
                         </svg>
+                        <span class="absolute inset-0 rounded-full bg-white animate-ping opacity-20"></span>
                     </label>
                 </div>
             </div>
 
-            <div class="video-modal">
-                <label for="video-toggle" class="modal-overlay"></label>
+            <div
+                class="video-modal fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+                <label for="video-toggle" class="absolute inset-0 bg-black/90 cursor-pointer"></label>
 
-                <div class="modal-content">
-                    <iframe width="100%" height="100%"
-                        src="https://cdn.shopify.com/videos/c/o/v/747375f4ce1e4946941f966c90baabbb.mp4"" frameborder="
-                        0" allowfullscreen></iframe>
+                <div class="relative w-full max-w-4xl aspect-video px-4 scale-90 transition-transform duration-300">
+                    <video controls class="w-full h-full rounded shadow-2xl bg-black">
+                        <source src="https://cdn.shopify.com/videos/c/o/v/747375f4ce1e4946941f966c90baabbb.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
 
-                    <label for="video-toggle" class="close-btn">&times;</label>
+                    <label for="video-toggle"
+                        class="absolute -top-12 right-4 text-white text-4xl cursor-pointer hover:text-gray-300 transition-colors">
+                        &times;
+                    </label>
                 </div>
-                </d iv>
-
             </div>
+        </div>
     </section>
 
     <!-- Trending products -->
@@ -1462,8 +1469,29 @@
         </div>
     </section>
 
-    <!-- Reel scrool -->
+    <!-- customer section -->
+    <section class="py-10 bg-gray-100 overflow-hidden">
+        <div class="container mx-auto px-4 md:px-24">
+            <h2 class="text-3xl font-serif text-center mb-14 text-gray-800">
+                Happy customer
+            </h2>
 
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                       
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Reel scrool -->
     <section class="py-10 bg-gray-100 overflow-hidden">
         <div class="container mx-auto px-4 md:px-24">
             <h2 class="text-3xl font-serif text-center mb-14 text-gray-800">
@@ -1620,7 +1648,7 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 
 
@@ -1754,9 +1782,18 @@
     </script> -->
 
 
-    <script>
-
-    </script>
+    	<script>
+		var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 4,
+      centeredSlides: true,
+      spaceBetween: 30,
+      grabCursor: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+	</script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
