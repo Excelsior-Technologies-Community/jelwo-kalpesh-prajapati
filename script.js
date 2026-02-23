@@ -1,58 +1,43 @@
-
+// 1. Manual Product Slider (Custom JS)
 const slider = document.getElementById('product-slider');
 const nextBtn = document.getElementById('nextBtn');
 const prevBtn = document.getElementById('prevBtn');
 
-let currentIndex = 0;
-const itemsToShow = 2; // Number of items visible at once
-const totalItems = slider.children.length;
-const maxIndex = totalItems - itemsToShow;
+// Only run if these elements exist to avoid errors
+if (slider && nextBtn && prevBtn) {
+    let currentIndex = 0;
+    const itemsToShow = 2;
+    const totalItems = slider.children.length;
+    const maxIndex = totalItems - itemsToShow;
 
-function updateSlider() {
-    // Calculate movement: (Width of one item + gap) * index
-    // Since we use flex gap-4 (16px), we account for that
-    const percentage = (currentIndex * 50);
-    slider.style.transform = `translateX(-${percentage}%)`;
+    function updateSlider() {
+        const percentage = (currentIndex * 50);
+        slider.style.transform = `translateX(-${percentage}%)`;
+        prevBtn.style.opacity = currentIndex === 0 ? "0.5" : "1";
+        nextBtn.style.opacity = currentIndex >= maxIndex ? "0.5" : "1";
+    }
 
-    // Optional: Style buttons when at start or end
-    prevBtn.style.opacity = currentIndex === 0 ? "0.5" : "1";
-    nextBtn.style.opacity = currentIndex >= maxIndex ? "0.5" : "1";
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < maxIndex) { currentIndex++; updateSlider(); }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) { currentIndex--; updateSlider(); }
+    });
+
+    updateSlider();
 }
 
-nextBtn.addEventListener('click', () => {
-    if (currentIndex < maxIndex) {
-        currentIndex++;
-        updateSlider();
-    }
-});
-
-prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-    }
-});
-
-// Initialize button state
-updateSlider();
-
-
-
-
-const mainSwiper = new Swiper('.main-jewelry-carousel', {
+// 2. Main Jewelry Carousel (Swiper)
+const mainJewelrySwiper = new Swiper('.main-jewelry-carousel', {
     loop: true,
     speed: 1200,
     grabCursor: true,
     keyboard: { enabled: true },
-    effect: 'slide',
-
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
+    autoplay: { delay: 5000, disableOnInteraction: false },
 });
 
-
+// 3. Category Swiper
 const categorySwiper = new Swiper(".categorySwiper", {
     slidesPerView: "auto",
     spaceBetween: 0,
@@ -60,25 +45,51 @@ const categorySwiper = new Swiper(".categorySwiper", {
     freeMode: true,
 });
 
-// Timer For section
-const targetDate = new Date("march 31, 2026 23:59:59").getTime();
+// 4. Jewelry Product Section Swiper (RENAMED to jewelrySwiper)
+const jewelrySwiper = new Swiper('.myJewelrySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 4 }
+    }
+});
+
+// 5. Reels Section Swiper (RENAMED to reelsSwiper)
+const reelsSwiper = new Swiper('.reelSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    freeMode: true,
+    speed: 10000,
+    autoplay: {
+        delay: 0, // Seamless loop
+        disableOnInteraction: false
+    },
+    breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 4 },
+        1280: { slidesPerView: 5 }
+    }
+});
+
+// 6. Countdown Timer Logic
+const targetDate = new Date("March 31, 2026 23:59:59").getTime();
 
 const updateCountdown = () => {
     const now = new Date().getTime();
     const gap = targetDate - now;
 
-    // Math for time units
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
+    if (gap < 0) return; // Stop if date is passed
+
+    const second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
 
     const d = Math.floor(gap / day);
     const h = Math.floor((gap % day) / hour);
     const m = Math.floor((gap % hour) / minute);
     const s = Math.floor((gap % minute) / second);
 
-    // Update every card at once
     document.querySelectorAll('.js-days').forEach(el => el.innerText = d);
     document.querySelectorAll('.js-hours').forEach(el => el.innerText = h);
     document.querySelectorAll('.js-mins').forEach(el => el.innerText = m);
@@ -86,21 +97,4 @@ const updateCountdown = () => {
 };
 
 setInterval(updateCountdown, 1000);
-
-
-//  Jewelry Section
-const swiper = new Swiper('.myJewelrySwiper', {
-    slidesPerView: 1,
-    spaceBetween: 24,
-    loop: true,
-
-    breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 4 } // This forces 4 cards in one raw/row
-    }
-});
-
-
-
-
-
+updateCountdown(); // Run immediately so it doesn't wait 1 second to show numbers
