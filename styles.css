@@ -1,4 +1,6 @@
 body {
+  scroll-behavior: smooth;
+  motion: ;
 
   font-size: 16px;
 
