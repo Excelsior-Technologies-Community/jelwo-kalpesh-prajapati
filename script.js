@@ -50,16 +50,6 @@ const mainSwiper = new Swiper('.main-jewelry-carousel', {
         delay: 5000,
         disableOnInteraction: false,
     },
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
 });
 
 
@@ -73,31 +63,44 @@ const categorySwiper = new Swiper(".categorySwiper", {
 // Timer For section
 const targetDate = new Date("march 31, 2026 23:59:59").getTime();
 
-        const updateCountdown = () => {
-            const now = new Date().getTime();
-            const gap = targetDate - now;
+const updateCountdown = () => {
+    const now = new Date().getTime();
+    const gap = targetDate - now;
 
-            // Math for time units
-            const second = 1000;
-            const minute = second * 60;
-            const hour = minute * 60;
-            const day = hour * 24;
+    // Math for time units
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
 
-            const d = Math.floor(gap / day);
-            const h = Math.floor((gap % day) / hour);
-            const m = Math.floor((gap % hour) / minute);
-            const s = Math.floor((gap % minute) / second);
+    const d = Math.floor(gap / day);
+    const h = Math.floor((gap % day) / hour);
+    const m = Math.floor((gap % hour) / minute);
+    const s = Math.floor((gap % minute) / second);
 
-            // Update every card at once
-            document.querySelectorAll('.js-days').forEach(el => el.innerText = d);
-            document.querySelectorAll('.js-hours').forEach(el => el.innerText = h);
-            document.querySelectorAll('.js-mins').forEach(el => el.innerText = m);
-            document.querySelectorAll('.js-secs').forEach(el => el.innerText = s);
-        };
+    // Update every card at once
+    document.querySelectorAll('.js-days').forEach(el => el.innerText = d);
+    document.querySelectorAll('.js-hours').forEach(el => el.innerText = h);
+    document.querySelectorAll('.js-mins').forEach(el => el.innerText = m);
+    document.querySelectorAll('.js-secs').forEach(el => el.innerText = s);
+};
 
-        setInterval(updateCountdown, 1000);
+setInterval(updateCountdown, 1000);
+
+
+//  Jewelry Section
+const swiper = new Swiper('.myJewelrySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+
+    breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 4 } // This forces 4 cards in one raw/row
+    }
+});
 
 
 
-        
+
 
