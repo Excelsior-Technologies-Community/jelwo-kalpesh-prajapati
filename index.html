@@ -1463,311 +1463,166 @@
     </section>
 
     <!-- Reel scrool -->
+
     <section class="py-10 bg-gray-100 overflow-hidden">
-        <div class="container mx-auto px-24">
+        <div class="container mx-auto px-4 md:px-24">
             <h2 class="text-3xl font-serif text-center mb-14 text-gray-800">
                 Watch & shop reels
             </h2>
 
-            <div class="container mx-auto p-6">
-                <div class="max-w-7xl mx-auto px-4 ">
+            <div class="swiper reelSwiper px-4">
+                <div class="swiper-wrapper">
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-
-                        <!-- CARD -->
-                        <div class="relative h-[500px] overflow-hidden rounded-sm group">
-
-                            <!-- Background Image -->
-                            <img src="	https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-31.jpg?v=1742444512&width=720"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                alt="Chic diamond ring">
-
-                            <!-- Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
+                    <div class="swiper-slide relative h-[450px] overflow-hidden rounded-lg group">
+                        <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source
+                                src="https://jelwo.myshopify.com/cdn/shop/videos/c/vp/7826750f43d941b28a3d57b2fd330864/7826750f43d941b28a3d57b2fd330864.HD-1080p-2.5Mbps-44713018.mp4?v=0"
+                                type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-5 right-5 text-white">
+                            <div class="bg-white p-2 w-16 mb-4 rounded-sm">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
+                                    class="w-full object-contain">
                             </div>
-
-                            <!-- Content -->
-                            <div class="absolute bottom-6 left-6 right-6 text-white">
-
-                                <div class="bg-white p-3 w-20 mb-4">
-                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
-                                        class="w-full object-contain">
-                                </div>
-
-                                <h3 class="text-lg font-semibold">
-                                    Chic diamond ring
-                                </h3>
-
-                                <p class="text-md font-bold mt-1">
-                                    Rs. 22.00
-                                </p>
-
-                                <button
-                                    class="mt-4 w-full bg-[#b58e58] py-3 rounded-full font-semibold tracking-wide hover:bg-[#a07c4a] transition">
-                                    ADD TO CART
-                                </button>
-
-                            </div>
+                            <h3 class="text-lg font-semibold leading-tight">Chic diamond ring</h3>
+                            <p class="text-md font-bold mt-1">Rs. 22.00</p>
+                            <button
+                                class="mt-4 w-full bg-[#b58e58] py-2.5 rounded-full text-xs font-bold tracking-widest hover:bg-white hover:text-[#b58e58] transition-all">ADD
+                                TO CART</button>
                         </div>
-
-                        <!-- card 2 -->
-                        <div class="relative h-[500px] overflow-hidden rounded-sm group">
-
-                            <!-- Background Image -->
-                            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-video-banner.jpg?v=1742625158&width=800"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                alt="Chic diamond ring">
-
-                            <!-- Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-                            </div>
-
-                            <!-- Content -->
-                            <div class="absolute bottom-6 left-6 right-6 text-white">
-
-                                <div class="bg-white p-3 w-20 mb-4">
-                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
-                                        class="w-full object-contain">
-                                </div>
-
-                                <h3 class="text-lg font-semibold">
-                                    Chic diamond ring
-                                </h3>
-
-                                <p class="text-md font-bold mt-1">
-                                    Rs. 22.00
-                                </p>
-
-                                <button
-                                    class="mt-4 w-full bg-[#b58e58] py-3 rounded-full font-semibold tracking-wide hover:bg-[#a07c4a] transition">
-                                    ADD TO CART
-                                </button>
-
-                            </div>
-                        </div>
-
-                        <!-- card 3 -->
-                        <div class="relative h-[500px] overflow-hidden rounded-sm group">
-
-                            <!-- Background Image -->
-                            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-video-banner.jpg?v=1742625158&width=800"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                alt="Chic diamond ring">
-
-                            <!-- Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-                            </div>
-
-                            <!-- Content -->
-                            <div class="absolute bottom-6 left-6 right-6 text-white">
-
-                                <div class="bg-white p-3 w-20 mb-4">
-                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
-                                        class="w-full object-contain">
-                                </div>
-
-                                <h3 class="text-lg font-semibold">
-                                    Chic diamond ring
-                                </h3>
-
-                                <p class="text-md font-bold mt-1">
-                                    Rs. 22.00
-                                </p>
-
-                                <button
-                                    class="mt-4 w-full bg-[#b58e58] py-3 rounded-full font-semibold tracking-wide hover:bg-[#a07c4a] transition">
-                                    ADD TO CART
-                                </button>
-
-                            </div>
-                        </div>
-
-                        <!-- card 4 -->
-                        <div class="relative h-[500px] overflow-hidden rounded-sm group">
-
-                            <!-- Background Image -->
-                            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-video-banner.jpg?v=1742625158&width=800"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                alt="Chic diamond ring">
-
-                            <!-- Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-                            </div>
-
-                            <!-- Content -->
-                            <div class="absolute bottom-6 left-6 right-6 text-white">
-
-                                <div class="bg-white p-3 w-20 mb-4">
-                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
-                                        class="w-full object-contain">
-                                </div>
-
-                                <h3 class="text-lg font-semibold">
-                                    Chic diamond ring
-                                </h3>
-
-                                <p class="text-md font-bold mt-1">
-                                    Rs. 22.00
-                                </p>
-
-                                <button
-                                    class="mt-4 w-full bg-[#b58e58] py-3 rounded-full font-semibold tracking-wide hover:bg-[#a07c4a] transition">
-                                    ADD TO CART
-                                </button>
-
-                            </div>
-                        </div>
-
-                        <!-- card 5 -->
-                        <div class="relative h-[500px] overflow-hidden rounded-sm group">
-
-                            <!-- Background Image -->
-                            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-video-banner.jpg?v=1742625158&width=800"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                alt="Chic diamond ring">
-
-                            <!-- Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-                            </div>
-
-                            <!-- Content -->
-                            <div class="absolute bottom-6 left-6 right-6 text-white">
-
-                                <div class="bg-white p-3 w-20 mb-4">
-                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
-                                        class="w-full object-contain">
-                                </div>
-
-                                <h3 class="text-lg font-semibold">
-                                    Chic diamond ring
-                                </h3>
-
-                                <p class="text-md font-bold mt-1">
-                                    Rs. 22.00
-                                </p>
-
-                                <button
-                                    class="mt-4 w-full bg-[#b58e58] py-3 rounded-full font-semibold tracking-wide hover:bg-[#a07c4a] transition">
-                                    ADD TO CART
-                                </button>
-
-                            </div>
-                        </div>
-
-                        <!-- card 6 -->
-                        <div class="relative h-[500px] overflow-hidden rounded-sm group">
-
-                            <!-- Background Image -->
-                            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-video-banner.jpg?v=1742625158&width=800"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                alt="Chic diamond ring">
-
-                            <!-- Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-                            </div>
-
-                            <!-- Content -->
-                            <div class="absolute bottom-6 left-6 right-6 text-white">
-
-                                <div class="bg-white p-3 w-20 mb-4">
-                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
-                                        class="w-full object-contain">
-                                </div>
-
-                                <h3 class="text-lg font-semibold">
-                                    Chic diamond ring
-                                </h3>
-
-                                <p class="text-md font-bold mt-1">
-                                    Rs. 22.00
-                                </p>
-
-                                <button
-                                    class="mt-4 w-full bg-[#b58e58] py-3 rounded-full font-semibold tracking-wide hover:bg-[#a07c4a] transition">
-                                    ADD TO CART
-                                </button>
-
-                            </div>
-                        </div>
-
-                        <!-- card 7 -->
-                        <div class="relative h-[500px] overflow-hidden rounded-sm group">
-
-                            <!-- Background Image -->
-                            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-video-banner.jpg?v=1742625158&width=800"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                alt="Chic diamond ring">
-
-                            <!-- Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-                            </div>
-
-                            <!-- Content -->
-                            <div class="absolute bottom-6 left-6 right-6 text-white">
-
-                                <div class="bg-white p-3 w-20 mb-4">
-                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
-                                        class="w-full object-contain">
-                                </div>
-
-                                <h3 class="text-lg font-semibold">
-                                    Chic diamond ring
-                                </h3>
-
-                                <p class="text-md font-bold mt-1">
-                                    Rs. 22.00
-                                </p>
-
-                                <button
-                                    class="mt-4 w-full bg-[#b58e58] py-3 rounded-full font-semibold tracking-wide hover:bg-[#a07c4a] transition">
-                                    ADD TO CART
-                                </button>
-
-                            </div>
-                        </div>
-
-                        <!-- card 8 -->
-                        <div class="relative h-[500px] overflow-hidden rounded-sm group">
-
-                            <!-- Background Image -->
-                            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-video-banner.jpg?v=1742625158&width=800"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                alt="Chic diamond ring">
-
-                            <!-- Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-                            </div>
-
-                            <!-- Content -->
-                            <div class="absolute bottom-6 left-6 right-6 text-white">
-
-                                <div class="bg-white p-3 w-20 mb-4">
-                                    <img src="	https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-31.jpg?v=1742444512&width=720"
-                                        class="w-full object-contain">
-                                </div>
-
-                                <h3 class="text-lg font-semibold">
-                                    Chic diamond ring
-                                </h3>
-
-                                <p class="text-md font-bold mt-1">
-                                    Rs. 22.00
-                                </p>
-
-                                <button
-                                    class="mt-4 w-full bg-[#b58e58] py-3 rounded-full font-semibold tracking-wide hover:bg-[#a07c4a] transition">
-                                    ADD TO CART
-                                </button>
-
-                            </div>
-                        </div>
-
-
                     </div>
+
+                    <div class="swiper-slide relative h-[450px] overflow-hidden rounded-lg group">
+                        <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source
+                                src="http://jelwo.myshopify.com/cdn/shop/videos/c/vp/accac3e666ff4e5c9314443e6438ea3a/accac3e666ff4e5c9314443e6438ea3a.HD-1080p-4.8Mbps-44581059.mp4?v=0"
+                                type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-5 right-5 text-white">
+                            <div class="bg-white p-2 w-16 mb-4 rounded-sm">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
+                                    class="w-full object-contain">
+                            </div>
+                            <h3 class="text-lg font-semibold leading-tight">Diamond Necklace</h3>
+                            <p class="text-md font-bold mt-1">Rs. 45.00</p>
+                            <button
+                                class="mt-4 w-full bg-[#b58e58] py-2.5 rounded-full text-xs font-bold tracking-widest hover:bg-white hover:text-[#b58e58] transition-all">ADD
+                                TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide relative h-[450px] overflow-hidden rounded-lg group">
+                        <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source
+                                src="http://jelwo.myshopify.com/cdn/shop/videos/c/vp/72e5b0f02511443c8a62a81b9024ddb9/72e5b0f02511443c8a62a81b9024ddb9.HD-1080p-3.3Mbps-44622574.mp4?v=0"
+                                type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-5 right-5 text-white">
+                            <div class="bg-white p-2 w-16 mb-4 rounded-sm">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
+                                    class="w-full object-contain">
+                            </div>
+                            <h3 class="text-lg font-semibold leading-tight">Gold Bracelets</h3>
+                            <p class="text-md font-bold mt-1">Rs. 30.00</p>
+                            <button
+                                class="mt-4 w-full bg-[#b58e58] py-2.5 rounded-full text-xs font-bold tracking-widest hover:bg-white hover:text-[#b58e58] transition-all">ADD
+                                TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide relative h-[450px] overflow-hidden rounded-lg group">
+                        <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source
+                                src="http://jelwo.myshopify.com/cdn/shop/videos/c/vp/916ce2bac08d4c5c94bf6e154631eb8b/916ce2bac08d4c5c94bf6e154631eb8b.HD-1080p-7.2Mbps-44713017.mp4?v=0"
+                                type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-5 right-5 text-white">
+                            <div class="bg-white p-2 w-16 mb-4 rounded-sm">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
+                                    class="w-full object-contain">
+                            </div>
+                            <h3 class="text-lg font-semibold leading-tight">Pearl Set</h3>
+                            <p class="text-md font-bold mt-1">Rs. 55.00</p>
+                            <button
+                                class="mt-4 w-full bg-[#b58e58] py-2.5 rounded-full text-xs font-bold tracking-widest hover:bg-white hover:text-[#b58e58] transition-all">ADD
+                                TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide relative h-[450px] overflow-hidden rounded-lg group">
+                        <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source
+                                src="http://jelwo.myshopify.com/cdn/shop/videos/c/vp/d030285c343f4cbbbf4851801cf773e8/d030285c343f4cbbbf4851801cf773e8.HD-1080p-7.2Mbps-44713018.mp4?v=0"
+                                type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-5 right-5 text-white">
+                            <div class="bg-white p-2 w-16 mb-4 rounded-sm">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
+                                    class="w-full object-contain">
+                            </div>
+                            <h3 class="text-lg font-semibold leading-tight">Luxury Gemstone</h3>
+                            <p class="text-md font-bold mt-1">Rs. 99.00</p>
+                            <button
+                                class="mt-4 w-full bg-[#b58e58] py-2.5 rounded-full text-xs font-bold tracking-widest hover:bg-white hover:text-[#b58e58] transition-all">ADD
+                                TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide relative h-[450px] overflow-hidden rounded-lg group">
+                        <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source
+                                src="http://jelwo.myshopify.com/cdn/shop/videos/c/vp/accac3e666ff4e5c9314443e6438ea3a/accac3e666ff4e5c9314443e6438ea3a.HD-1080p-4.8Mbps-44581059.mp4?v=0"
+                                type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-5 right-5 text-white">
+                            <div class="bg-white p-2 w-16 mb-4 rounded-sm">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
+                                    class="w-full object-contain">
+                            </div>
+                            <h3 class="text-lg font-semibold leading-tight">Diamond Necklace</h3>
+                            <p class="text-md font-bold mt-1">Rs. 45.00</p>
+                            <button
+                                class="mt-4 w-full bg-[#b58e58] py-2.5 rounded-full text-xs font-bold tracking-widest hover:bg-white hover:text-[#b58e58] transition-all">ADD
+                                TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide relative h-[450px] overflow-hidden rounded-lg group">
+                        <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source
+                                src="http://jelwo.myshopify.com/cdn/shop/videos/c/vp/72e5b0f02511443c8a62a81b9024ddb9/72e5b0f02511443c8a62a81b9024ddb9.HD-1080p-3.3Mbps-44622574.mp4?v=0"
+                                type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-5 right-5 text-white">
+                            <div class="bg-white p-2 w-16 mb-4 rounded-sm">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=300"
+                                    class="w-full object-contain">
+                            </div>
+                            <h3 class="text-lg font-semibold leading-tight">Gold Bracelets</h3>
+                            <p class="text-md font-bold mt-1">Rs. 30.00</p>
+                            <button
+                                class="mt-4 w-full bg-[#b58e58] py-2.5 rounded-full text-xs font-bold tracking-widest hover:bg-white hover:text-[#b58e58] transition-all">ADD
+                                TO CART</button>
+                        </div>
+                    </div>
+
                 </div>
 
+
             </div>
+        </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 
     <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
         <div class="container mx-auto px-24">
@@ -1904,7 +1759,6 @@
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    <script src="slider.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
