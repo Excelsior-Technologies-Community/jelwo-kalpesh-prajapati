@@ -69,6 +69,10 @@ body {
   pointer-events: auto;
 } 
 
+.reelSwiper .swiper-wrapper {
+  transition-timing-function: linear;
+}   
+
   @media (max-width: 1024px) {
     .categorySwiper .swiper-slide {
       width: 50% !important;
