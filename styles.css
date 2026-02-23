@@ -1,6 +1,6 @@
 body {
   scroll-behavior: smooth;
-  motion: ;
+  
 
   font-size: 16px;
 
@@ -49,6 +49,7 @@ body {
 .reelSwiper .swiper-wrapper {
   transition-timing-function: linear;
 }   
+
 
   @media (max-width: 1024px) {
     .categorySwiper .swiper-slide {
