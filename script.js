@@ -56,22 +56,26 @@ const jewelrySwiper = new Swiper('.myJewelrySwiper', {
 });
 
 // 5. Reels Section Swiper (RENAMED to reelsSwiper)
-const reelsSwiper = new Swiper('.reelSwiper', {
-    slidesPerView: 1,
+const reelSwiper = new Swiper('.reelSwiper', {
+slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
-    freeMode: true,
-    speed: 10000,
-    autoplay: {
-        delay: 0, // Seamless loop
-        disableOnInteraction: false
+    navigation: {
+        nextEl: ".reel-next",
+        prevEl: ".reel-prev",
     },
     breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 4 },
+        640: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 4,
+        },
         1280: { slidesPerView: 5 }
-    }
+    },
 });
+
+
 
 // 6. Countdown Timer Logic
 const targetDate = new Date("March 31, 2026 23:59:59").getTime();
