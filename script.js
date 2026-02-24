@@ -49,7 +49,6 @@ const categorySwiper = new Swiper(".categorySwiper", {
 const jewelrySwiper = new Swiper('.myJewelrySwiper', {
     slidesPerView: 1,
     spaceBetween: 24,
-    loop: true,
     breakpoints: {
         640: { slidesPerView: 2 },
         1024: { slidesPerView: 4 }
@@ -96,5 +95,28 @@ const updateCountdown = () => {
     document.querySelectorAll('.js-secs').forEach(el => el.innerText = s);
 };
 
+
+
 setInterval(updateCountdown, 1000);
 updateCountdown(); // Run immediately so it doesn't wait 1 second to show numbers
+
+
+function closeModal() {
+    const modal = document.getElementById('newsletter-modal');
+    modal.style.display = 'none';
+    
+    // Logic for "Don't show again"
+    const checkbox = document.getElementById('dont-show');
+    if (checkbox.checked) {
+      localStorage.setItem('hideNewsletter', 'true');
+    }
+  }
+
+  // Check on page load
+  window.onload = function() {
+    if (localStorage.getItem('hideNewsletter') === 'true') {
+      document.getElementById('newsletter-modal').style.display = 'none';
+    }
+  }
+
+  
