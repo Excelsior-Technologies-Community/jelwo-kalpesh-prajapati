@@ -45,7 +45,7 @@ const categorySwiper = new Swiper(".categorySwiper", {
     freeMode: true,
 });
 
-// 4. Jewelry Product Section Swiper (RENAMED to jewelrySwiper)
+// 4. Jewelry Product Section Swiper (RENAMED to jewelrySwiper)  ITs allso used in  trending product
 const jewelrySwiper = new Swiper('.myJewelrySwiper', {
     slidesPerView: 1,
     spaceBetween: 24,
