@@ -123,4 +123,24 @@ function closeModal() {
     }
   }
 
+
+  const mainImg = document.getElementById('mainImg');
+const thumbnails = document.querySelectorAll('.thumb');
+
+thumbnails.forEach(thumb => {
+    thumb.addEventListener('click', function() {
+        // 1. Update the main image source
+        mainImg.src = this.src;
+
+        // 2. Reset all thumbnails to default border
+        thumbnails.forEach(t => {
+            t.classList.remove('border-black', 'border-4');
+            t.classList.add('border-gray-300', 'border-2');
+        });
+
+        // 3. Highlight the clicked thumbnail
+        this.classList.remove('border-gray-300', 'border-2');
+        this.classList.add('border-black', 'border-4');
+    });
+});
   
