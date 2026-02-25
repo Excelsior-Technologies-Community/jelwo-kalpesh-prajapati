@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Optional Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <title>Rose gold rings - Jelwo</title>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="w-full font-sans bg-white border-b border-gray-100">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between py-4 space-x-4 lg:space-x-8">
+
+                <div class="flex items-center flex-shrink-0">
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-logo.png?v=1744805986&width=352"
+                        class="w-24 md:w-32" alt="Logo" />
+                    <div
+                        class="hidden lg:block border-l border-gray-200 ml-8 pl-8 text-sm text-gray-500 whitespace-nowrap">
+                        Free UK standard delivery on all orders.
+                    </div>
+                </div>
+
+                <div class="relative flex-1 max-w-md hidden md:block">
+                    <input type="text" placeholder="Search product..."
+                        class="w-full py-2 pl-4 pr-10 bg-gray-50 border border-gray-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-amber-700" />
+                    <button class="absolute right-3 top-2.5 text-gray-400">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <div class="flex items-center space-x-4 md:space-x-6 text-gray-600">
+                    <button class="hover:text-amber-700 transition-colors">
+                        <i class="fa-regular fa-user text-lg md:text-xl"></i>
+                    </button>
+                    <button class="flex items-center space-x-1 hover:text-amber-700 transition-colors">
+                        <i class="fa-regular fa-heart text-lg md:text-xl"></i>
+                        <span class="text-xs md:text-sm">(0)</span>
+                    </button>
+                    <button class="flex items-center space-x-1 hover:text-amber-700 transition-colors">
+                        <i class="fa-solid fa-bag-shopping text-lg md:text-xl"></i>
+                        <span class="text-xs md:text-sm">(0)</span>
+                    </button>
+                    <button class="md:hidden text-gray-800">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden md:block border-t border-gray-50">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between uppercase tracking-wide text-[13px] font-semibold text-gray-700">
+
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-headphones text-amber-800"></i>
+                    <span class="whitespace-nowrap">(220) 123 456 7890</span>
+                </div>
+
+                <nav class="relative flex items-center justify-center space-x-6 lg:space-x-10 h-12 bg-white">
+
+                    <div class="group h-full flex items-center">
+                        <a href="#"
+                            class="flex items-center hover:text-amber-700 transition-colors font-semibold uppercase tracking-wide text-[13px] border-b-2 border-transparent group-hover:border-amber-700 h-full">
+                            Home <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+                        </a>
+
+                        <div
+                            class="absolute left-[50%] translate-x-[-50%] top-full hidden group-hover:block w-screen bg-white shadow-2xl border-t border-gray-100 z-50">
+                            <div class="max-w-[1400px] mx-auto px-10 py-12">
+
+                                <div class="grid grid-cols-6 gap-6">
+                                    <div class="text-center group/card cursor-pointer">
+                                        <div
+                                            class="relative overflow-hidden mb-4 bg-gray-50 aspect-square flex items-center justify-center">
+                                            <img src="https://jelwo.myshopify.com/cdn/shop/files/home6.jpg?v=1750230396&width=352"
+                                                class="w-full h-full object-contain transition-transform duration-700 group-hover/card:scale-110" />
+                                            <span
+                                                class="absolute top-2 left-2 bg-green-500 text-white text-[10px] px-2 py-0.5 rounded-sm transform -rotate-45 font-bold">New</span>
+                                        </div>
+                                        <p
+                                            class="text-[13px] text-gray-500 group-hover/card:text-amber-800 transition-colors uppercase tracking-tight">
+                                            06 Classic jewelry</p>
+                                    </div>
+
+                                    <div class="text-center group/card cursor-pointer">
+                                        <div class="overflow-hidden mb-4 bg-gray-50 aspect-square">
+                                            <img src="https://jelwo.myshopify.com/cdn/shop/files/demo-menu-banner-1.jpg?v=1746178520&width=352"
+                                                class="w-full h-full object-contain transition-transform duration-700 group-hover/card:scale-110" />
+                                        </div>
+                                        <p
+                                            class="text-[13px] text-gray-500 group-hover/card:text-amber-800 uppercase tracking-tight">
+                                            01 Unique jewelry</p>
+                                    </div>
+
+                                    <div class="text-center group/card cursor-pointer">
+                                        <div class="overflow-hidden mb-4 bg-gray-50 aspect-square">
+                                            <img src="https://jelwo.myshopify.com/cdn/shop/files/demo-menu-banner-2.jpg?v=1746178520&width=352"
+                                                class="w-full h-full object-contain transition-transform duration-700 group-hover/card:scale-110" />
+                                        </div>
+                                        <p
+                                            class="text-[13px] text-gray-500 group-hover/card:text-amber-800 uppercase tracking-tight">
+                                            02 Modern jewelry</p>
+                                    </div>
+
+                                    <div class="text-center group/card cursor-pointer">
+                                        <div class="overflow-hidden mb-4 bg-gray-50 aspect-square">
+                                            <img src="https://jelwo.myshopify.com/cdn/shop/files/demo-menu-banner-3.jpg?v=1746178520&width=352"
+                                                class="w-full h-full object-contain transition-transform duration-700 group-hover/card:scale-110" />
+                                        </div>
+                                        <p
+                                            class="text-[13px] text-gray-500 group-hover/card:text-amber-800 uppercase tracking-tight">
+                                            03 Traditional jewelry</p>
+                                    </div>
+
+                                    <div class="text-center group/card cursor-pointer">
+                                        <div class="overflow-hidden mb-4 bg-gray-50 aspect-square">
+                                            <img src="https://jelwo.myshopify.com/cdn/shop/files/demo-menu-banner-4.jpg?v=1746178520&width=352"
+                                                class="w-full h-full object-contain transition-transform duration-700 group-hover/card:scale-110" />
+                                        </div>
+                                        <p
+                                            class="text-[13px] text-gray-500 group-hover/card:text-amber-800 uppercase tracking-tight">
+                                            04 luxury jewelry</p>
+                                    </div>
+
+                                    <div class="text-center group/card cursor-pointer">
+                                        <div class="overflow-hidden mb-4 bg-gray-50 aspect-square">
+                                            <img src="https://jelwo.myshopify.com/cdn/shop/files/demo-menu-banner-5.jpg?v=1746178520&width=352"
+                                                class="w-full h-full object-contain transition-transform duration-700 group-hover/card:scale-110" />
+                                        </div>
+                                        <p
+                                            class="text-[13px] text-gray-500 group-hover/card:text-amber-800 uppercase tracking-tight">
+                                            05 Elegant jewelry</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group h-full flex items-center">
+                        <a href="#"
+                            class="flex items-center hover:text-amber-700 transition-colors font-semibold uppercase tracking-wide text-[13px] border-b-2 border-transparent group-hover:border-amber-700 h-full">
+                            Shop <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+                        </a>
+
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block w-screen bg-white shadow-2xl border-t border-gray-100 z-50">
+                            <div class="max-w-[1400px] mx-auto px-10 py-4">
+
+
+                                <div class="grid grid-cols-12 gap-8">
+
+                                    <div class="col-span-9 grid grid-cols-4 gap-4">
+
+                                        <div class="space-y-4">
+                                            <h3 class="font-bold text-gray-900 text-[14px] uppercase tracking-wider">
+                                                Earrings</h3>
+                                            <ul class="space-y-3 text-[13px] text-gray-500">
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Blue
+                                                        heavy t-shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Brown
+                                                        sunglasses</a></li>
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Bucket
+                                                        shoes</a></li>
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Diamond
+                                                        rashmi ring</a></li>
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Floral
+                                                        gold bangle</a></li>
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Glitter
+                                                        diamond ring</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="space-y-4 border-l border-gray-100 pl-6">
+                                            <h3 class="font-bold text-gray-900 text-[14px] uppercase tracking-wider">
+                                                Necklace</h3>
+                                            <ul class="space-y-3 text-[13px] text-gray-500">
+                                                <li><a href="#" class="hover:text-amber-700">Rose gold rings</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Brown sunglasses</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Bucket shoes</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Color print sandal</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Floral gold bangle</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Simple Pearl earrings</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="space-y-4 border-l border-gray-100 pl-6">
+                                            <h3 class="font-bold text-gray-900 text-[14px] uppercase tracking-wider">
+                                                Rings</h3>
+                                            <ul class="space-y-3 text-[13px] text-gray-500">
+                                                <li><a href="#" class="hover:text-amber-700">Blue heavy t-shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Brown sunglasses</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Dark sunglasses</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Half sleev tshirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Formal shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Gold nose pin</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="space-y-4 border-l border-gray-100 pl-6">
+                                            <h3 class="font-bold text-gray-900 text-[14px] uppercase tracking-wider">
+                                                Bracelets</h3>
+                                            <ul class="space-y-3 text-[13px] text-gray-500">
+                                                <li><a href="#" class="hover:text-amber-700">Blue heavy t-shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Brown sunglasses</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Formal shoes</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Formal shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Blue heavy t-shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Brown sunglasses</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-span-3">
+                                        <div
+                                            class="relative group/promo overflow-hidden bg-gray-100 h-[276px] w-[230px]">
+
+                                            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-menu-banner.jpg?v=1742635152&width=352"
+                                                class="w-full h-full object-cover transition-transform duration-700 group-hover/promo:scale-105" />
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group h-full flex items-center">
+                        <a href="#"
+                            class="flex items-center hover:text-amber-700 transition-colors font-semibold uppercase tracking-wide text-[13px] border-b-2 border-transparent group-hover:border-amber-700 h-full">
+                            Products <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+                        </a>
+
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block w-screen bg-white shadow-2xl border-t border-gray-100 z-50">
+                            <div class="max-w-[1400px] mx-auto px-10 py-10">
+                                <div class="grid grid-cols-12 gap-8">
+
+                                    <div class="col-span-8 grid grid-cols-4 gap-4 border-r border-gray-100 pr-8">
+                                        <div class="space-y-4">
+                                            <h3 class="font-bold text-gray-900 text-[14px] uppercase tracking-wider">
+                                                Earrings</h3>
+                                            <ul class="space-y-3 text-[13px] text-gray-500">
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Blue
+                                                        heavy t-shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Brown
+                                                        sunglasses</a></li>
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Bucket
+                                                        shoes</a></li>
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">lamond
+                                                        rashmi ring</a></li>
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Floral
+                                                        gold bangle</a></li>
+                                                <li><a href="#" class="hover:text-amber-700 transition-colors">Glitter
+                                                        diamond ring</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="space-y-4">
+                                            <h3 class="font-bold text-gray-900 text-[14px] uppercase tracking-wider">
+                                                Bracelets</h3>
+                                            <ul class="space-y-3 text-[13px] text-gray-500">
+                                                <li><a href="#" class="hover:text-amber-700">Blue heavy t-shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Brown sunglasses</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Formal shoes</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Formal shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Blue heavy t-shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Brown sunglasses</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="space-y-4">
+                                            <h3 class="font-bold text-gray-900 text-[14px] uppercase tracking-wider">
+                                                Necklace</h3>
+                                            <ul class="space-y-3 text-[13px] text-gray-500">
+                                                <li><a href="#" class="hover:text-amber-700">Rose gold rings</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Brown sunglasses</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Bucket shoes</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Color print sandal</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Floral gold bangle</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Simple Pearl earrings</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="space-y-4">
+                                            <h3 class="font-bold text-gray-900 text-[14px] uppercase tracking-wider">
+                                                Rings</h3>
+                                            <ul class="space-y-3 text-[13px] text-gray-500">
+                                                <li><a href="#" class="hover:text-amber-700">Blue heavy t-shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Brown sunglasses</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Dark sunglasses</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Half sleev tshirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Formal shirt</a></li>
+                                                <li><a href="#" class="hover:text-amber-700">Gold nose pin</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-span-4 space-y-6">
+                                        <div class="flex items-center justify-between">
+                                            <h3 class="font-bold text-gray-900 text-[15px]">Popular collection</h3>
+                                            <div class="flex space-x-2">
+                                                <button id="prevBtn"
+                                                    class="p-1 border border-gray-200 hover:bg-gray-100 rounded-sm text-gray-400">
+                                                    <i class="fa-solid fa-arrow-left text-xs"></i>
+                                                </button>
+                                                <button id="nextBtn"
+                                                    class="p-1 border border-gray-200 hover:bg-gray-100 rounded-sm text-gray-400">
+                                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="relative overflow-hidden">
+                                            <div id="product-slider"
+                                                class="flex transition-transform duration-300 ease-in-out gap-4">
+
+                                                <div class="min-w-[calc(50%-8px)] text-center group/prod">
+                                                    <div
+                                                        class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
+                                                        <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300"
+                                                            class="w-full h-full object-contain" />
+                                                        <span
+                                                            class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">20%</span>
+                                                    </div>
+                                                    <div class="mt-4 space-y-1">
+                                                        <p class="text-[13px] text-gray-600 font-medium">Rs. 28.00 <span
+                                                                class="text-gray-400 line-through ml-1 text-[12px]">Rs.
+                                                                35.00</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="min-w-[calc(50%-8px)] text-center group/prod">
+                                                    <div
+                                                        class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
+                                                        <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-56.jpg?v=1741670785&width=300"
+                                                            class="w-full h-full object-contain" />
+                                                        <span
+                                                            class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">56%</span>
+                                                    </div>
+                                                    <div class="mt-4 space-y-1">
+                                                        <p class="text-[13px] text-gray-600 font-medium">From Rs. 17.00
+                                                            <span
+                                                                class="text-gray-400 line-through ml-1 text-[12px]">Rs.
+                                                                39.00</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="min-w-[calc(50%-8px)] text-center group/prod">
+                                                    <div
+                                                        class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
+                                                        <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-46.jpg?v=1741668328&width=300"
+                                                            class="w-full h-full object-contain" />
+                                                        <span
+                                                            class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">56%</span>
+                                                    </div>
+                                                    <div class="mt-4 space-y-1">
+                                                        <p class="text-[13px] text-gray-600 font-medium">From Rs. 17.00
+                                                            <span
+                                                                class="text-gray-400 line-through ml-1 text-[12px]">Rs.
+                                                                39.00</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="min-w-[calc(50%-8px)] text-center group/prod">
+                                                    <div
+                                                        class="relative bg-white border border-gray-100 p-4 aspect-square flex items-center justify-center overflow-hidden">
+                                                        <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-41.jpg?v=1741667580&width=300"
+                                                            class="w-full h-full object-contain" />
+                                                        <span
+                                                            class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] px-1.5 py-0.5 rounded-sm">56%</span>
+                                                    </div>
+                                                    <div class="mt-4 space-y-1">
+                                                        <p class="text-[13px] text-gray-600 font-medium">From Rs. 17.00
+                                                            <span
+                                                                class="text-gray-400 line-through ml-1 text-[12px]">Rs.
+                                                                39.00</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <a href="#"
+                        class="hover:text-amber-700 transition-colors uppercase tracking-wide text-[13px] font-semibold">Blog</a>
+                    <div class="relative group inline-block">
+                        <a href="#"
+                            class="flex items-center hover:text-amber-700 transition-colors uppercase tracking-wide text-[13px] font-semibold border-b-2 border-transparent hover:border-amber-700 pb-1">
+                            Pages
+                            <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
+                        </a>
+
+                        <div
+                            class="absolute left-0 top-full w-64 bg-white shadow-xl border border-gray-100 py-2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <ul class="flex flex-col">
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-between px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50 transition-colors group/item">
+                                        About us <i
+                                            class="fa-solid fa-chevron-right text-[10px] text-gray-400 group-hover/item:text-amber-700"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-between px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50 transition-colors group/item">
+                                        Contact <i
+                                            class="fa-solid fa-chevron-right text-[10px] text-gray-400 group-hover/item:text-amber-700"></i>
+                                    </a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Faq's</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Privacy
+                                        policy</a></li>
+                                <li><a href="#"
+                                        class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Refund
+                                        policy</a></li>
+                                <li><a href="#" class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Store
+                                        location</a></li>
+                                <li><a href="#"
+                                        class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50">Shipping &
+                                        return</a></li>
+                                <li><a href="#"
+                                        class="block px-6 py-3 text-[12px] text-gray-700 hover:bg-gray-50 border-b-0">Terms
+                                        & condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </nav>
+                <div class="flex items-center space-x-2 text-gray-700">
+                    <i class="fa-solid fa-house text-amber-800"></i>
+                    <span class="whitespace-nowrap">Free Try at Home</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-10 lg:px-20">
+        <nav class="text-[11px] uppercase tracking-widest text-gray-400 mb-8">
+            Home / <span class="text-gray-800">Rose gold rings</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="space-y-4">
+                <div
+                    class="bg-[#F9F9F9] rounded-xl p-12 border border-gray-600 flex justify-center cursor-zoom-in overflow-hidden">
+                    <img id="mainImg"
+                        src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-56.jpg?v=1741670785&width=1920"
+                        class="w-full h-auto object-contain cursor-zoom-in transition-transform duration-300"
+                        alt="Rose Gold Ring">
+                </div>
+                <div class="grid grid-cols-5 gap-3">
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-56.jpg?v=1741670785&width=1920"
+                        class="thumb cursor-pointer border-2 border-gray-300 rounded p-1">
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-57.jpg?v=1741670785&width=300"
+                        class="thumb cursor-pointer border-2 border-gray-300 rounded p-1">
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-58.jpg?v=1741670785&width=300"
+                        class="thumb cursor-pointer border-2 border-gray-300 rounded p-1">
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-59.jpg?v=1741670785&width=300"
+                        class="thumb cursor-pointer border-2 border-gray-300 rounded p-1">
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-60.jpg?v=1741670785&width=300"
+                        class="thumb cursor-pointer border-2 border-gray-300 rounded p-1">
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <h1 class="text-3xl font-semibold">Rose gold rings</h1>
+                    <div class="flex items-center gap-2 mt-2">
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <span class="text-xs text-gray-400">1 review</span>
+                    </div>
+                </div>
+
+                <div class="flex items-baseline gap-4">
+                    <span class="text-2xl font-bold text-[#a77f66]">Rs. 22.00</span>
+                    <span class="text-gray-400 line-through text-sm">Rs. 40.00</span>
+                    <span class="bg-green-500 text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase">Sale
+                        45%</span>
+                </div>
+                <p class="text-[11px] text-gray-400 italic -mt-4">Tax included. Shipping calculated at checkout.</p>
+
+                <div class="text-green-600 text-sm font-medium flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> 15 in stock
+                </div>
+
+                <p class="text-[13px] text-gray-500 leading-relaxed border-t border-gray-100 pt-4">
+                    Care for fiber: 30% more recycled polyester. We label garments manufactured using environmentally
+                    friendly technologies and raw materials with the Join Life label.
+                </p>
+
+                <div class="bg-red-50 border border-red-100 rounded-lg p-4 flex justify-between items-center text-sm">
+                    <span class="text-red-600 font-bold italic">Hurry up! Sale ends in:</span>
+                    <span id="promo-section-timer"
+                        class="font-mono text-red-600 font-bold tracking-tighter text-lg">1647 : 10 : 44 : 54</span>
+                </div>
+
+                <div class="space-y-5">
+                    <div>
+                        <p class="text-[11px] font-bold uppercase mb-3">Size: <span id="sizeVal"
+                                class="font-normal text-gray-400">28</span></p>
+                        <div class="flex gap-2">
+                            <button
+                                class="size-btn border-2 border-gray-800 px-5 py-2 text-xs font-bold rounded">28</button>
+                            <button
+                                class="size-btn border border-gray-200 px-5 py-2 text-xs text-gray-400 rounded">29</button>
+                            <button
+                                class="size-btn border border-gray-200 px-5 py-2 text-xs text-gray-400 rounded">30</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-bold uppercase mb-3">Color: <span
+                                class="font-normal text-gray-400">Gold</span></p>
+                        <div class="flex gap-3">
+                            <button
+                                class="w-6 h-6 rounded-full bg-[#D4AF37] ring-2 ring-offset-2 ring-gray-800"></button>
+                            <button class="w-6 h-6 rounded-full bg-[#E6BE8A]"></button>
+                            <button class="w-6 h-6 rounded-full bg-[#C0C0C0]"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <div class="flex items-center border border-gray-200 rounded h-14 w-full sm:w-32">
+                        <button onclick="changeQty(-1)" class="flex-1 text-gray-400 font-bold text-xl">-</button>
+                        <input type="text" id="qty" value="1" class="w-10 text-center outline-none font-bold" readonly>
+                        <button onclick="changeQty(1)" class="flex-1 text-gray-400 font-bold text-xl">+</button>
+                    </div>
+                    <button
+                        class="flex-1 border-2 border-gray-800 rounded h-14 font-bold text-[11px] uppercase tracking-widest hover:bg-gray-800 hover:text-white transition-all">Add
+                        to Cart</button>
+                    <button id="buyBtnMain"
+                        class="flex-1 bg-gray-800 text-white rounded h-14 font-bold text-[11px] uppercase tracking-widest hover:bg-black transition-all">Buy
+                        it Now</button>
+                </div>
+
+                <div class="flex flex-wrap gap-6 text-[10px] text-gray-600 font-bold uppercase tracking-widest pt-2">
+                    <a href="#" class="flex items-center gap-1 hover:text-[#a77f66]"><i class="ri-heart-line"></i>
+                        Wishlist</a>
+                    <a href="#" class="flex items-center gap-1 hover:text-[#a77f66]"><i class="ri-ruler-line"></i>
+                        Sizeguide</a>
+                    <a href="#" class="flex items-center gap-1 hover:text-[#a77f66]"><i class="ri-question-line"></i>
+                        Question</a>
+                    <a href="#" class="flex items-center gap-1 hover:text-[#a77f66]"><i class="ri-share-line"></i>
+                        Share</a>
+                </div>
+
+                <div class="border-t border-gray-100 pt-6 space-y-2 text-[13px]">
+                    <p><span class="font-bold">Delivery:</span> <span class="text-gray-500">Estimated delivery time: 5-7
+                            days</span></p>
+                    <p><span class="font-bold">Returns:</span> <span class="text-gray-500">Within 45 days of
+                            purchase</span></p>
+                    <p><span class="font-bold">Sku:</span> <span class="text-gray-500">445</span></p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 border border-gray-100 rounded-xl p-6 text-center mt-6">
+                    <div class="space-y-2">
+                        <i class="ri-map-pin-line text-xl text-[#a77f66]"></i>
+                        <p class="text-[10px] font-bold uppercase">Order tracking</p>
+                    </div>
+                    <div class="space-y-2 border-x border-gray-100">
+                        <i class="ri-refresh-line text-xl text-[#a77f66]"></i>
+                        <p class="text-[10px] font-bold uppercase">90 days return</p>
+                    </div>
+                    <div class="space-y-2">
+                        <i class="ri-money-dollar-circle-line text-xl text-[#a77f66]"></i>
+                        <p class="text-[10px] font-bold uppercase">Money guarantee</p>
+                    </div>
+                </div>
+
+                <div class="pt-8 border-t border-gray-100">
+                    <div class="border-b border-gray-100">
+                        <button
+                            class="acc-trigger w-full flex justify-between items-center py-5 text-sm font-semibold">Video
+                            <i class="ri-add-line"></i></button>
+                        <div class="acc-content hidden pb-6 text-xs text-gray-500">Video content placeholder.</div>
+                    </div>
+
+                    <div class="border-b border-gray-100">
+                        <button
+                            class="acc-trigger w-full flex justify-between items-center py-5 text-sm font-semibold">Description
+                            <i class="ri-add-line"></i></button>
+                        <div class="acc-content hidden pb-10 pt-4">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                                <div class="md:col-span-4 flex justify-center">
+                                    <div class="w-56 h-56 rounded-full overflow-hidden border-4 border-gray-50"><img
+                                            src="https://cdn.shopify.com/s/files/1/0671/2567/4121/files/product-description.jpg?v=1746179918"
+                                            class="w-full h-full object-cover"></div>
+                                </div>
+                                <div class="md:col-span-4 space-y-6">
+                                    <div>
+                                        <h4 class="text-xs font-bold uppercase mb-2">Product Specifications</h4>
+                                        <p class="text-xs text-gray-500">Care for fiber: 30% more recycled polyester. We
+                                            label garments with the Join Life label.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold uppercase mb-2">Washing Instructions</h4>
+                                        <ul class="space-y-2 text-xs text-gray-500">
+                                            <li><i class="ri-t-shirt-line mr-2"></i> Iron maximum 100°C</li>
+                                            <li><i class="ri-prohibit-line mr-2"></i> Do not bleach</li>
+                                            <li><i class="ri-wireless-charging-line mr-2"></i> Do not dry clean</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="md:col-span-4 space-y-6">
+                                    <div>
+                                        <h4 class="text-xs font-bold uppercase mb-2">Material</h4>
+                                        <p class="text-xs text-gray-500">The Green to Wear 2.0 standard aims to minimize
+                                            environmental impact of textile production.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold uppercase mb-2">Wearing</h4>
+                                        <p class="text-xs text-gray-500">Model is 1.84 m wearing Size M</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-100">
+                        <button
+                            class="acc-trigger w-full flex justify-between items-center py-5 text-sm font-semibold">Additional
+                            info <i class="ri-add-line"></i></button>
+                        <div class="acc-content hidden pb-6">
+                            <table class="w-full text-xs text-gray-500">
+                                <tr class="border-b border-gray-50">
+                                    <td class="py-3 font-bold text-gray-800">Vendor</td>
+                                    <td>Jelwo</td>
+                                </tr>
+                                <tr class="border-b border-gray-50">
+                                    <td class="py-3 font-bold text-gray-800">Type</td>
+                                    <td>Jewelry</td>
+                                </tr>
+                                <tr class="border-b border-gray-50">
+                                    <td class="py-3 font-bold text-gray-800">Size</td>
+                                    <td>28 , 29 , 30</td>
+                                </tr>
+                                <tr class="border-b border-gray-50">
+                                    <td class="py-3 font-bold text-gray-800">Weight</td>
+                                    <td>90.718 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-100">
+                        <button
+                            class="acc-trigger w-full flex justify-between items-center py-5 text-sm font-semibold">Return
+                            policies <i class="ri-add-line"></i></button>
+                        <div class="acc-content hidden pb-8 pt-2 text-[13px] text-gray-500 leading-relaxed">
+                            <p>Provided the conditions in our refund policy have been met, refunds will be processed
+                                using the original form of payment. Items must be returned within 30 days in original
+                                condition with all labels attached.</p>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-100">
+                        <button
+                            class="acc-trigger w-full flex justify-between items-center py-5 text-sm font-semibold">Review
+                            <i class="ri-add-line"></i></button>
+                        <div class="acc-content hidden pb-10 pt-6">
+                            <div
+                                class="flex flex-col md:flex-row items-center justify-between bg-gray-50 p-8 rounded-xl gap-8">
+                                <div class="text-center">
+                                    <div class="text-yellow-400 text-xl flex justify-center"><i
+                                            class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                            class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                            class="ri-star-fill"></i></div>
+                                    <p class="text-sm font-bold text-gray-800 mt-2">5.00 out of 5</p>
+                                    <p class="text-[10px] text-gray-400 uppercase tracking-tighter">Based on 1 review
+                                    </p>
+                                </div>
+                                <button
+                                    class="bg-[#a77f66] text-white px-8 py-3 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-[#8e6b56]">Write
+                                    a Review</button>
+                            </div>
+                            <div class="mt-8 border border-gray-100 rounded p-6 max-w-sm">
+                                <div class="flex justify-between items-center mb-4">
+                                    <div class="flex text-yellow-400 text-[10px]"><i class="ri-star-fill"></i><i
+                                            class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                            class="ri-star-fill"></i><i class="ri-star-fill"></i></div><span
+                                        class="text-[10px] text-gray-400">04/14/2025</span>
+                                </div>
+                                <div class="flex items-center gap-2 mb-2">
+                                    <div class="w-6 h-6 bg-gray-200 rounded-full"></div><span
+                                        class="text-xs font-bold">rgre</span>
+                                </div>
+                                <h5 class="text-xs font-bold">grgr</h5>
+                                <p class="text-xs text-gray-500">ggg</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="max-w-6xl mx-auto px-6 py-16 space-y-24 font-sans">
+
+        <section class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+            <div class="w-full md:w-1/2">
+                <img src="https://jelwo.myshopify.com/cdn/shop/files/product-about-img-1.jpg?v=1745823026&width=832"
+                    alt="Jewelry Showcase" class="w-full h-auto object-cover aspect-[4/3]">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-tight">
+                    New woman fashion<br>arrivals
+                </h2>
+                <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-8">
+                    As part of our mission create space for women to express their sensuality
+                    without shame fear or the patriarchal gaze we're asking women to invite
+                    us into their most intimate space.
+                </p>
+                <button
+                    class="bg-[#A6866E] hover:bg-[#8e715b] text-white text-[10px] font-black tracking-[0.2em] uppercase px-10 py-4 rounded-full transition-all">
+                    Shop Now
+                </button>
+            </div>
+        </section>
+
+        <section class="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
+            <div class="w-full md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-tight">
+                    I make clothes make<br>fashion
+                </h2>
+                <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-8">
+                    As part of our mission create space for women to express their sensuality
+                    without shame fear or the patriarchal gaze we're asking women to invite
+                    us into their most intimate space.
+                </p>
+                <button
+                    class="bg-[#A6866E] hover:bg-[#8e715b] text-white text-[10px] font-black tracking-[0.2em] uppercase px-10 py-4 rounded-full transition-all">
+                    Shop Now
+                </button>
+            </div>
+            <div class="w-full md:w-1/2">
+                <img src="https://jelwo.myshopify.com/cdn/shop/files/product-about-img-2.jpg?v=1745823024&width=832"
+                    alt="Earrings Detail" class="w-full h-auto object-cover aspect-[4/3]">
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Sticky Bar -->
+    <div id="stickyBar"
+        class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-100 px-6 py-4 z-50 transform translate-y-full transition-transform duration-500 shadow-2xl">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=100"
+                    class="w-12 h-12 object-contain bg-gray-50 rounded">
+                <div class="hidden md:block">
+                    <p class="text-sm font-bold">Rose gold rings</p>
+                    <p class="text-xs text-[#a77f66] font-bold">Rs. 22.00</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <select
+                    class="border border-gray-200 rounded-lg px-4 py-3 text-[11px] font-bold hidden sm:block bg-gray-50">
+                    <option>28 / Gold - Rs. 22.00</option>
+                </select>
+                <div class="flex items-center border border-gray-200 rounded h-12">
+                    <button onclick="changeQty(-1)" class="px-3 text-gray-400">-</button>
+                    <input type="text" id="stickyQty" value="1" class="w-6 text-center text-xs font-bold" readonly>
+                    <button onclick="changeQty(1)" class="px-3 text-gray-400">+</button>
+                </div>
+                <button
+                    class="bg-gray-800 text-white px-10 h-12 rounded font-bold text-[10px] uppercase tracking-widest">Add
+                    to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer from index.html -->
+    <footer class="bg-[#FCF8F4] border-t border-gray-100 pt-16 pb-8 font-sans">
+        <div class="container mx-auto px-6 lg:px-24">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-16">
+
+                <div class="space-y-6">
+                    <a href="/" class="block">
+                        <div class="flex items-center gap-1">
+                            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-logo.png?v=1744805986&width=352"
+                                class="w-24 md:w-32" alt="Logo" />
+                        </div>
+                    </a>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#a77f66] mt-1"><i class="ri-map-pin-line"></i></span>
+                            <span>55 East 10th street, new york,<br>ny 10003, united states</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#a77f66]"><i class="ri-phone-line"></i></span>
+                            <a href="tel:+2201234567890" class="hover:text-[#a77f66] transition-colors">+ (220) 123 456
+                                7890</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#a77f66]"><i class="ri-mail-line"></i></span>
+                            <a href="mailto:demo123546@gmail.com"
+                                class="hover:text-[#a77f66] transition-colors">demo123546@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-[16px] font-semibold text-[#a77f66] mb-6">Information</h2>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-[#a77f66]">About us</a></li>
+                        <li><a href="#" class="hover:text-[#a77f66]">Contact us</a></li>
+                        <li><a href="#" class="hover:text-[#a77f66]">Faq's</a></li>
+                        <li><a href="#" class="hover:text-[#a77f66]">News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-[16px] font-semibold text-[#a77f66] mb-6">Privacy & terms</h2>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-[#a77f66]">Privacy policy</a></li>
+                        <li><a href="#" class="hover:text-[#a77f66]">Refund policy</a></li>
+                        <li><a href="#" class="hover:text-[#a77f66]">Shipping & return</a></li>
+                        <li><a href="#" class="hover:text-[#a77f66]">Terms & condition</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-[16px] font-semibold text-[#a77f66] mb-6">Category</h2>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-[#a77f66]">Rings</a></li>
+                        <li><a href="#" class="hover:text-[#a77f66]">Earring</a></li>
+                        <li><a href="#" class="hover:text-[#a77f66]">Pendant</a></li>
+                        <li><a href="#" class="hover:text-[#a77f66]">Necklaces</a></li>
+                        <li><a href="#" class="hover:text-[#a77f66]">Bracelets</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-[16px] font-semibold text-[#a77f66] mb-6">Visit store</h2>
+                    <div class="space-y-3 text-sm text-gray-500">
+                        <p>Mon - sat : 10am - 11pm</p>
+                        <p>Sun : 10am - 4pm</p>
+                        <p>7 Days a week</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 py-12 border-t border-gray-200">
+                <div class="flex space-x-3">
+                    <a href="#"
+                        class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-400 hover:text-[#a77f66] transition-all"><i
+                            class="ri-facebook-fill"></i></a>
+                    <a href="#"
+                        class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-400 hover:text-[#a77f66] transition-all"><i
+                            class="ri-twitter-x-line"></i></a>
+                    <a href="#"
+                        class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-400 hover:text-[#a77f66] transition-all"><i
+                            class="ri-instagram-line"></i></a>
+                    <a href="#"
+                        class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-400 hover:text-[#a77f66] transition-all"><i
+                            class="ri-pinterest-line"></i></a>
+                    <a href="#"
+                        class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-400 hover:text-[#a77f66] transition-all"><i
+                            class="ri-youtube-line"></i></a>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <p class="text-[#a77f66] font-medium text-lg">Subscribe and get 15% discount.</p>
+                    <div
+                        class="relative flex items-center bg-[#F4F1EE] rounded-full p-1 border border-gray-200 w-full md:w-[450px]">
+                        <input type="email" placeholder="Enter your email"
+                            class="bg-transparent w-full pl-6 pr-4 py-3 outline-none text-gray-600 text-sm">
+                        <button
+                            class="bg-[#a77f66] text-white px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#8e6b56] transition-colors">
+                            SUBSCRIBE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>Copyright © 2026 by spacingtech</p>
+
+                <div class="flex items-center gap-2 mt-4 md:mt-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa"
+                        class="h-4 grayscale hover:grayscale-0 cursor-pointer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
+                        class="h-6 grayscale hover:grayscale-0 cursor-pointer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="Paypal"
+                        class="h-4 grayscale hover:grayscale-0 cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // 5. Unique Countdown Simulation for Product Page
+        function startProductPromoCountdown() {
+            const clock = document.getElementById('promo-section-timer');
+
+            // Safety check to ensure the element exists on the page
+            if (!clock) return;
+
+            let sec = 54;
+
+            // Clear any existing intervals if this script is re-run
+            if (window.promoTimerInterval) clearInterval(window.promoTimerInterval);
+
+            window.promoTimerInterval = setInterval(() => {
+                sec--;
+                if (sec < 0) sec = 59;
+
+                // padStart(2, '0') ensures "09" instead of "9"
+                const formattedSec = sec.toString().padStart(2, '0');
+                clock.innerText = `1647 : 10 : 44 : ${formattedSec}`;
+            }, 1000);
+        }
+
+        // Initialize the countdown when the DOM is ready
+        document.addEventListener('DOMContentLoaded', startProductPromoCountdown);
+    </script>
+
+</body>
+
+</html>
