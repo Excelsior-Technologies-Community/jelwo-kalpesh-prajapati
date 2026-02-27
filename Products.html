@@ -23,6 +23,8 @@
 
 <body>
 
+
+
     <!-- Navbar -->
     <header class="w-full font-sans bg-white border-b border-gray-100">
 
@@ -50,17 +52,20 @@
                     <button class="hover:text-amber-700 transition-colors">
                         <i class="fa-regular fa-user text-lg md:text-xl"></i>
                     </button>
-                    <button class="flex items-center space-x-1 hover:text-amber-700 transition-colors">
+                    <a href="wishlist.html" class="flex items-center space-x-1 hover:text-amber-700 transition-colors">
                         <i class="fa-regular fa-heart text-lg md:text-xl"></i>
-                        <span class="text-xs md:text-sm">(0)</span>
-                    </button>
-                    <button class="flex items-center space-x-1 hover:text-amber-700 transition-colors">
+                        <span class="wishlist-count text-xs md:text-sm">(0)</span>
+                    </a>
+                    <a href="cart.html" class="flex items-center space-x-1 hover:text-amber-700 transition-colors">
                         <i class="fa-solid fa-bag-shopping text-lg md:text-xl"></i>
-                        <span class="text-xs md:text-sm">(0)</span>
-                    </button>
-                    <button class="md:hidden text-gray-800">
+                        <span class="cart-count text-xs md:text-sm">(0)</span>
+                    </a>
+
+
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-gray-800 focus:outline-none">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
+
                 </div>
             </div>
         </div>
@@ -538,8 +543,8 @@
 
                 <div class="bg-red-50 border border-red-100 rounded-lg p-4 flex justify-between items-center text-sm">
                     <span class="text-red-600 font-bold italic">Hurry up! Sale ends in:</span>
-                    <span id="promo-section-timer"
-                        class="font-mono text-red-600 font-bold tracking-tighter text-lg">1647 : 10 : 44 : 54</span>
+                    <span id="promo-section-timer" class="font-mono text-red-600 font-bold tracking-tighter text-lg">47
+                        : 10 : 44 : 54</span>
                 </div>
 
                 <div class="space-y-5">
@@ -573,17 +578,31 @@
                         <input type="text" id="qty" value="1" class="w-10 text-center outline-none font-bold" readonly>
                         <button onclick="changeQty(1)" class="flex-1 text-gray-400 font-bold text-xl">+</button>
                     </div>
-                    <button
+                    <button onclick="addToCart({
+                        id: 'rose-gold-rings', 
+                        name: 'Rose gold rings', 
+                        price: 22.00, 
+                        img: 'https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-56.jpg?v=1741670785&width=1920',
+                        size: document.getElementById('sizeVal').textContent,
+                        color: 'Gold'
+                    }, parseInt(document.getElementById('qty').value))"
                         class="flex-1 border-2 border-gray-800 rounded h-14 font-bold text-[11px] uppercase tracking-widest hover:bg-gray-800 hover:text-white transition-all">Add
                         to Cart</button>
+
                     <button id="buyBtnMain"
                         class="flex-1 bg-gray-800 text-white rounded h-14 font-bold text-[11px] uppercase tracking-widest hover:bg-black transition-all">Buy
                         it Now</button>
                 </div>
 
                 <div class="flex flex-wrap gap-6 text-[10px] text-gray-600 font-bold uppercase tracking-widest pt-2">
-                    <a href="#" class="flex items-center gap-1 hover:text-[#a77f66]"><i class="ri-heart-line"></i>
+                    <a href="javascript:void(0)" onclick="toggleWishlist({
+                        id: 'rose-gold-rings', 
+                        name: 'Rose gold rings', 
+                        price: 22.00, 
+                        img: 'https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-56.jpg?v=1741670785&width=1920'
+                    })" class="flex items-center gap-1 hover:text-[#a77f66]"><i class="ri-heart-line"></i>
                         Wishlist</a>
+
                     <a href="#" class="flex items-center gap-1 hover:text-[#a77f66]"><i class="ri-ruler-line"></i>
                         Sizeguide</a>
                     <a href="#" class="flex items-center gap-1 hover:text-[#a77f66]"><i class="ri-question-line"></i>
@@ -704,38 +723,40 @@
                     <div class="border-b border-gray-100">
                         <button
                             class="acc-trigger w-full flex justify-between items-center py-5 text-sm font-semibold">Review
-                            <i class="ri-add-line"></i></button>
-                        <div class="acc-content hidden pb-10 pt-6">
-                            <div
-                                class="flex flex-col md:flex-row items-center justify-between bg-gray-50 p-8 rounded-xl gap-8">
-                                <div class="text-center">
-                                    <div class="text-yellow-400 text-xl flex justify-center"><i
-                                            class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                                            class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                                            class="ri-star-fill"></i></div>
-                                    <p class="text-sm font-bold text-gray-800 mt-2">5.00 out of 5</p>
-                                    <p class="text-[10px] text-gray-400 uppercase tracking-tighter">Based on 1 review
-                                    </p>
+                            <i class="ri-add-line"></i></dbutton>
+                            <div class="acc-content hidden pb-10 pt-6">
+                                <div
+                                    class="flex flex-col md:flex-row items-center justify-between bg-gray-50 p-8 rounded-xl gap-8">
+                                    <div class="text-center">
+                                        <div class="text-yellow-400 text-xl flex justify-center"><i
+                                                class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                                class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                                class="ri-star-fill"></i></div>
+                                        <p class="text-sm font-bold text-gray-800 mt-2">5.00 out of 5</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-tighter">Based on 1
+                                            review
+                                        </p>
+                                    </div>
+                                    <button
+                                        class="bg-[#a77f66] text-white px-8 py-3 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-[#8e6b56]">Write
+                                        a Review</button>
                                 </div>
-                                <button
-                                    class="bg-[#a77f66] text-white px-8 py-3 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-[#8e6b56]">Write
-                                    a Review</button>
+                                <div class="mt-8 border border-gray-100 rounded p-6 max-w-sm">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <div class="flex text-yellow-400 text-[10px]"><i class="ri-star-fill"></i><i
+                                                class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                                class="ri-star-fill"></i><i class="ri-star-fill"></i></div><span
+                                            class="text-[10px] text-gray-400">04/14/2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <div class="w-6 h-6 bg-gray-600 rounded-full"></div><span
+                                            class="text-xs font-bold">
+                                            amisha</span>
+                                    </div>
+                                    <h5 class="text-xs font-bold">grgr</h5>
+                                    <p class="text-xs text-gray-500">ggg</p>
+                                </div>
                             </div>
-                            <div class="mt-8 border border-gray-100 rounded p-6 max-w-sm">
-                                <div class="flex justify-between items-center mb-4">
-                                    <div class="flex text-yellow-400 text-[10px]"><i class="ri-star-fill"></i><i
-                                            class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                                            class="ri-star-fill"></i><i class="ri-star-fill"></i></div><span
-                                        class="text-[10px] text-gray-400">04/14/2025</span>
-                                </div>
-                                <div class="flex items-center gap-2 mb-2">
-                                    <div class="w-6 h-6 bg-gray-200 rounded-full"></div><span
-                                        class="text-xs font-bold">rgre</span>
-                                </div>
-                                <h5 class="text-xs font-bold">grgr</h5>
-                                <p class="text-xs text-gray-500">ggg</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -839,6 +860,7 @@
                             <div
                                 class="absolute inset-0 z-10 flex items-center justify-center gap-3 bg-[#bb9d89] opacity-0 transition-opacity duration-300 group-hover:opacity-90">
                                 <button
+                                    onclick="toggleWishlist({id: 'pearl-earring-rec', name: 'Simple Pearl earrings', price: 15.00, img: 'https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=352'})"
                                     class="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white hover:bg-white hover:text-[#bb9d89] transition-colors">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -846,6 +868,7 @@
                                             d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                                     </svg>
                                 </button>
+
                                 <button
                                     class="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white hover:bg-white hover:text-[#bb9d89] transition-colors">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -898,8 +921,10 @@
                                     </div>
                                 </div>
                                 <button
+                                    onclick="addToCart({id: 'pearl-earring-rec', name: 'Simple Pearl earrings', price: 15.00, img: 'https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=352'})"
                                     class="border-b border-[#bb9d89] text-[#bb9d89] font-bold text-xs uppercase tracking-[0.2em] pb-1">Add
                                     to Cart</button>
+
                             </div>
                         </div>
                     </div>
@@ -914,12 +939,14 @@
                             <div
                                 class="absolute inset-0 z-10 flex items-center justify-center gap-3 bg-[#bb9d89] opacity-0 transition-opacity duration-300 group-hover:opacity-90">
                                 <button
+                                    onclick="toggleWishlist({id: 'chic-diamond-rec', name: 'Chic diamond ring', price: 22.00, img: 'https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-9.jpg?v=1742442751&width=352'})"
                                     class="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white hover:bg-white hover:text-[#bb9d89] transition-colors"><svg
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                                     </svg></button>
+
                                 <button
                                     class="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white hover:bg-white hover:text-[#bb9d89] transition-colors"><svg
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -949,8 +976,10 @@
                                             class="px-2 text-gray-400">+</button></div>
                                 </div>
                                 <button
+                                    onclick="addToCart({id: 'chic-diamond-rec', name: 'Chic diamond ring', price: 22.00, img: 'https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-9.jpg?v=1742442751&width=352'})"
                                     class="border-b border-[#bb9d89] text-[#bb9d89] font-bold text-xs uppercase tracking-[0.2em] pb-1">Add
                                     to Cart</button>
+
                             </div>
                         </div>
                     </div>
@@ -964,7 +993,7 @@
                                 alt="Gemstone Jhumkas" class="mx-auto h-full object-contain">
                             <div
                                 class="absolute inset-0 z-10 flex items-center justify-center gap-3 bg-[#bb9d89] opacity-0 transition-opacity duration-300 group-hover:opacity-90">
-                                <button
+                                <button id="wishlist-btn-gemstone-jhumkas"
                                     class="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white hover:bg-white hover:text-[#bb9d89] transition-colors"><svg
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -1034,7 +1063,7 @@
                                 alt="Drop Gold Earrings" class="mx-auto h-full object-contain">
                             <div
                                 class="absolute inset-0 z-10 flex items-center justify-center gap-3 bg-[#bb9d89] opacity-0 transition-opacity duration-300 group-hover:opacity-90">
-                                <button
+                                <button id="wishlist-btn-drop-gold-earrings"
                                     class="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white hover:bg-white hover:text-[#bb9d89] transition-colors"><svg
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -1085,7 +1114,7 @@
                                 alt="Drop Gold Earrings" class="mx-auto h-full object-contain">
                             <div
                                 class="absolute inset-0 z-10 flex items-center justify-center gap-3 bg-[#bb9d89] opacity-0 transition-opacity duration-300 group-hover:opacity-90">
-                                <button
+                                <button id="wishlist-btn-gold-ring"
                                     class="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white hover:bg-white hover:text-[#bb9d89] transition-colors"><svg
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -1116,7 +1145,7 @@
                                         <p class="text-[10px] text-gray-400">MIN</p>
                                     </div>
                                     <div class="text-center px-1">
-                                        <p class="js-secs font-bold text-sm">50</p>
+                                        <p class="js-sec/s font-bold text-sm">50</p>
                                         <p class="text-[10px] text-gray-400">SEC</p>
                                     </div>
                                 </div>
@@ -1133,6 +1162,7 @@
                                 <div class="flex gap-2"><select
                                         class="border border-gray-200 text-xs p-1 outline-none text-gray-500">
                                         <option>Gold</option>
+                                        <option>silver</option>
                                     </select>
                                     <div class="flex border border-gray-200 items-center text-xs"><button
                                             class="px-2 text-gray-400">-</button><span
@@ -1277,6 +1307,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="cart-wishlist.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -1298,7 +1329,7 @@
 
                 // padStart(2, '0') ensures "09" instead of "9"
                 const formattedSec = sec.toString().padStart(2, '0');
-                clock.innerText = `1647 : 10 : 44 : ${formattedSec}`;
+                clock.innerText = `47 : 10 : 44 : ${formattedSec}`;
             }, 1000);
         }
 
@@ -1328,6 +1359,53 @@
         });
     </script>
 
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer"
+        class="fixed inset-0 z-[100] translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div onclick="toggleMobileMenu()" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-2xl flex flex-col">
+            <div class="p-6 border-b border-gray-100 flex items-center justify-between">
+                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-logo.png?v=1744805986&width=352"
+                    class="w-24" alt="Logo" />
+                <button onclick="toggleMobileMenu()" class="text-gray-400 hover:text-black transition-colors">
+                    <i class="ri-close-line text-2xl"></i>
+                </button>
+            </div>
+            <nav
+                class="flex-1 overflow-y-auto p-6 space-y-6 uppercase tracking-wider text-sm font-semibold text-gray-700">
+                <a href="index.html"
+                    class="block hover:text-amber-700 transition-colors py-2 border-b border-gray-50 uppercase">Home</a>
+                <a href="Products.html"
+                    class="block hover:text-amber-700 transition-colors py-2 border-b border-gray-50 uppercase">Products</a>
+                <a href="wishlist.html"
+                    class="block hover:text-amber-700 transition-colors py-2 border-b border-gray-50 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-regular fa-heart text-amber-700"></i>
+                        <span>Wishlist</span>
+                    </div>
+                    <span class="cart-count text-xs text-amber-800 bg-amber-50 px-2 py-0.5 rounded-full">(0)</span>
+
+                </a>
+                <a href="cart.html"
+                    class="block hover:text-amber-700 transition-colors py-2 border-b border-gray-50 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-bag-shopping text-amber-700"></i>
+                        <span>Cart</span>
+                    </div>
+                    <span class="cart-count text-xs text-amber-800 bg-amber-50 px-2 py-0.5 rounded-full">(0)</span>
+
+                </a>
+            </nav>
+            <div class="p-6 border-t border-gray-100 bg-gray-50">
+                <div class="flex items-center space-x-3 text-gray-500 mb-4">
+                    <i class="fas fa-headphones text-amber-800"></i>
+                    <span class="text-xs">(220) 123 456 7890</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 
 </html>
