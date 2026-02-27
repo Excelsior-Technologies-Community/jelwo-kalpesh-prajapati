@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Optional Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <title>Shopping Cart - Jelwo</title>
+</head>
+
+<body class="bg-white font-sans text-gray-900">
+
+    <!-- Navbar -->
+    <header class="w-full font-sans bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between py-4 space-x-4 lg:space-x-8">
+                <div class="flex items-center flex-shrink-0">
+                    <a href="index.html">
+                        <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-logo.png?v=1744805986&width=352"
+                            class="w-24 md:w-32" alt="Logo" />
+                    </a>
+                </div>
+
+                <div class="flex items-center space-x-4 md:space-x-6 text-gray-600">
+                    <a href="wishlist.html" class="flex items-center space-x-1 hover:text-amber-700 transition-colors">
+                        <i class="fa-regular fa-heart text-lg md:text-xl"></i>
+                        <span class="wishlist-count text-xs md:text-sm">(0)</span>
+                    </a>
+                    <a href="cart.html" class="flex items-center space-x-1 hover:text-amber-700 transition-colors">
+                        <i class="fa-solid fa-bag-shopping text-lg md:text-xl"></i>
+                        <span class="cart-count text-xs md:text-sm">(0)</span>
+                    </a>
+
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-gray-800 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="relative flex flex-col items-center justify-center h-48 bg-cover bg-center text-white"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://jelwo.myshopify.com/cdn/shop/files/jewelry-3-breadcrumb.jpg?v=1742473987&width=1920');">
+        <nav class="mb-1 text-xs font-light uppercase tracking-[0.2em] opacity-90">
+            Home — Your Cart
+        </nav>
+        <h1 class="text-3xl font-medium tracking-tight md:text-4xl">
+            Shopping Cart
+        </h1>
+    </section>
+
+    <!-- Cart Content -->
+    <main class="max-w-7xl mx-auto px-6 py-16 lg:px-24">
+        <div id="cart-empty" class="hidden flex flex-col items-center justify-center text-center py-20">
+            <div class="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mb-6">
+                <i class="ri-shopping-bag-line text-3xl text-gray-300"></i>
+            </div>
+            <p class="text-lg text-gray-800 mb-6 font-medium">Your shopping bag is empty</p>
+            <a href="index.html"
+                class="bg-gray-900 text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-amber-800 transition-all">
+                Continue Shopping
+            </a>
+        </div>
+
+        <div id="cart-container" class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Cart Items -->
+            <div class="lg:col-span-8">
+                <div
+                    class="border-b border-gray-100 pb-4 hidden md:grid grid-cols-12 gap-4 text-[10px] uppercase font-bold tracking-widest text-gray-400">
+                    <div class="col-span-6">Product</div>
+                    <div class="col-span-2 text-center">Price</div>
+                    <div class="col-span-2 text-center">Quantity</div>
+                    <div class="col-span-2 text-right">Total</div>
+                </div>
+                <div id="cart-items-list" class="divide-y divide-gray-50">
+                    <!-- Items injected here -->
+                </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="lg:col-span-4">
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 sticky top-8">
+                    <h2 class="text-xl font-semibold mb-6">Order Summary</h2>
+                    <div class="space-y-4 text-sm mb-6 pb-6 border-b border-gray-200">
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Subtotal</span>
+                            <span id="cart-subtotal" class="font-bold">Rs. 0.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Shipping</span>
+                            <span class="text-green-600 font-medium">Free</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500">Taxes</span>
+                            <span class="font-bold">Calculated at checkout</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-lg font-bold mb-8">
+                        <span>Total</span>
+                        <span id="cart-total" class="text-amber-800">Rs. 0.00</span>
+                    </div>
+                    <button
+                        class="w-full bg-gray-900 text-white py-4 rounded-full font-bold uppercase tracking-widest hover:bg-black transition-all shadow-lg">
+                        Proceed to Checkout
+                    </button>
+                    <p class="text-center text-[11px] text-gray-400 mt-4 italic">
+                        Secure SSL Encryption & Returns within 45 days
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#FCF8F4] border-t border-gray-100 pt-16 pb-8 font-sans mt-20">
+        <div class="container mx-auto px-6 lg:px-24 text-center">
+            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-logo.png?v=1744805986&width=352"
+                class="w-24 md:w-32 mx-auto mb-8" alt="Logo" />
+            <p class="text-sm text-gray-500 mb-8">© 2026 Jelwo Jewelry Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cart-wishlist.js"></script>
+    <script src="cart-page.js"></script>
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer"
+        class="fixed inset-0 z-[100] translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div onclick="toggleMobileMenu()" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-2xl flex flex-col">
+            <div class="p-6 border-b border-gray-100 flex items-center justify-between">
+                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-logo.png?v=1744805986&width=352"
+                    class="w-24" alt="Logo" />
+                <button onclick="toggleMobileMenu()" class="text-gray-400 hover:text-black transition-colors">
+                    <i class="ri-close-line text-2xl"></i>
+                </button>
+            </div>
+            <nav
+                class="flex-1 overflow-y-auto p-6 space-y-6 uppercase tracking-wider text-sm font-semibold text-gray-700">
+                <a href="index.html"
+                    class="block hover:text-amber-700 transition-colors py-2 border-b border-gray-50 uppercase">Home</a>
+                <a href="Products.html"
+                    class="block hover:text-amber-700 transition-colors py-2 border-b border-gray-50 uppercase">Products</a>
+                <a href="wishlist.html"
+                    class="block hover:text-amber-700 transition-colors py-2 border-b border-gray-50 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-regular fa-heart text-amber-700"></i>
+                        <span>Wishlist</span>
+                    </div>
+                    <span class="wishlist-count text-xs text-amber-800 bg-amber-50 px-2 py-0.5 rounded-full">(0)</span>
+                </a>
+                <a href="cart.html"
+                    class="block hover:text-amber-700 transition-colors py-2 border-b border-gray-50 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-bag-shopping text-amber-700"></i>
+                        <span>Cart</span>
+                    </div>
+                    <span class="cart-count text-xs text-amber-800 bg-amber-50 px-2 py-0.5 rounded-full">(0)</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
