@@ -57,7 +57,7 @@ const jewelrySwiper = new Swiper('.myJewelrySwiper', {
 
 // 5. Reels Section Swiper (RENAMED to reelsSwiper)
 const reelSwiper = new Swiper('.reelSwiper', {
-slidesPerView: 1,
+    slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     navigation: {
@@ -108,27 +108,27 @@ updateCountdown(); // Run immediately so it doesn't wait 1 second to show number
 function closeModal() {
     const modal = document.getElementById('newsletter-modal');
     modal.style.display = 'none';
-    
+
     // Logic for "Don't show again"
     const checkbox = document.getElementById('dont-show');
     if (checkbox.checked) {
-      localStorage.setItem('hideNewsletter', 'true');
+        localStorage.setItem('hideNewsletter', 'true');
     }
-  }
+}
 
-  // Check on page load
-  window.onload = function() {
+// Check on page load
+window.onload = function () {
     if (localStorage.getItem('hideNewsletter') === 'true') {
-      document.getElementById('newsletter-modal').style.display = 'none';
+        document.getElementById('newsletter-modal').style.display = 'none';
     }
-  }
+}
 
 
-  const mainImg = document.getElementById('mainImg');
+const mainImg = document.getElementById('mainImg');
 const thumbnails = document.querySelectorAll('.thumb');
 
 thumbnails.forEach(thumb => {
-    thumb.addEventListener('click', function() {
+    thumb.addEventListener('click', function () {
         // 1. Update the main image source
         mainImg.src = this.src;
 
@@ -143,4 +143,12 @@ thumbnails.forEach(thumb => {
         this.classList.add('border-black', 'border-4');
     });
 });
-  
+
+
+// 7. Mobile Menu Toggle
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-drawer');
+    if (mobileMenu) {
+        mobileMenu.classList.toggle('translate-x-full');
+    }
+}
