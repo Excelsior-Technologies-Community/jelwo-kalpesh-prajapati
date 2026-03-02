@@ -2,6 +2,7 @@ var CART_KEY = 'jewelry_cart';
 var WISHLIST_KEY = 'jewelry_wishlist';
 
 
+<<<<<<< HEAD
 // Helper to get from LocalStorage (robust)
 function getStorage(key) {
     try {
@@ -17,6 +18,11 @@ function getStorage(key) {
         console.warn('getStorage parse error for', key, e);
         return [];
     }
+=======
+// Helper to get from LocalStorage
+function getStorage(key) {
+    return JSON.parse(localStorage.getItem(key) || '[]');
+>>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
 }
 
 // Helper to save to LocalStorage
@@ -28,6 +34,7 @@ function saveStorage(key, data) {
 // Update Heart and Bag counts in Navbar
 // Update standard counts (desktop and mobile)
 function updateNavbarCounts() {
+<<<<<<< HEAD
     const cart = getStorage(CART_KEY) || [];
     const wishlist = getStorage(WISHLIST_KEY) || [];
 
@@ -42,6 +49,15 @@ function updateNavbarCounts() {
     document.querySelectorAll('.wishlist-count').forEach(el => {
         el.textContent = `(${safeWishlist.length})`;
     });
+=======
+    const cart = getStorage(CART_KEY);
+    const wishlist = getStorage(WISHLIST_KEY);
+
+    document.querySelectorAll('.cart-count').forEach(el => {
+        const totalQty = cart.reduce((acc, item) => acc + (item.qty || 1), 0);
+        el.textContent = `(${totalQty})`;
+    });
+>>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
 }
 
 // Toggle Wishlist
@@ -64,6 +80,7 @@ function toggleWishlist(product) {
 
 // Add to Cart
 function addToCart(product, qty = 1) {
+<<<<<<< HEAD
     if (!product || !product.id) {
         console.warn('addToCart called with invalid product:', product);
         showToast('Unable to add item to bag.');
@@ -94,10 +111,24 @@ function addToCart(product, qty = 1) {
 
     saveStorage(CART_KEY, cart);
     showToast(`"${product.name || 'Item'}" added to bag!`);
+=======
+    let cart = getStorage(CART_KEY);
+    const existing = cart.find(item => item.id === product.id && item.color === product.color && item.size === product.size);
+
+    if (existing) {
+        existing.qty += qty;
+    } else {
+        cart.push({ ...product, qty });
+    }
+
+    saveStorage(CART_KEY, cart);
+    showToast(`"${product.name}" added to bag!`);
+>>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
 
     window.dispatchEvent(new CustomEvent('cartUpdated', { detail: { cart } }));
 }
 
+<<<<<<< HEAD
 /**
  * Extracts product data from an element's data attributes.
  * @param {HTMLElement} el 
@@ -155,6 +186,8 @@ function initAddToCartButtons() {
     });
 }
 
+=======
+>>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
 // Toast notification logic
 function showToast(message) {
     let toast = document.getElementById('app-toast');
@@ -191,6 +224,7 @@ function showToast(message) {
 }
 
 // Initialize counts on load
+<<<<<<< HEAD
 // Normalize stored values (remove legacy/fake values) and init counts
 function normalizeStorage() {
     try {
@@ -220,6 +254,9 @@ document.addEventListener('DOMContentLoaded', function () {
     updateNavbarCounts();
     initAddToCartButtons();
 });
+=======
+document.addEventListener('DOMContentLoaded', updateNavbarCounts);
+>>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
 
 // Sync counts across tabs
 window.addEventListener('storage', (e) => {
@@ -228,6 +265,7 @@ window.addEventListener('storage', (e) => {
     }
 });
 
+<<<<<<< HEAD
 /**
  * Global function to handle quantity changes for product details and product cards.
  * @param {number} delta - The amount to change (e.g., 1 or -1)
@@ -254,3 +292,5 @@ function changeQty(delta, target = 'qty') {
         el.textContent = val;
     }
 }
+=======
+>>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
