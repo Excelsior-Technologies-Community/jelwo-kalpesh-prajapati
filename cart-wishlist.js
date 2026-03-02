@@ -2,10 +2,6 @@ var CART_KEY = 'jewelry_cart';
 var WISHLIST_KEY = 'jewelry_wishlist';
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
 // Helper to get from LocalStorage (robust)
 function getStorage(key) {
     try {
@@ -21,14 +17,6 @@ function getStorage(key) {
         console.warn('getStorage parse error for', key, e);
         return [];
     }
-<<<<<<< HEAD
-=======
-=======
-// Helper to get from LocalStorage
-function getStorage(key) {
-    return JSON.parse(localStorage.getItem(key) || '[]');
->>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
 }
 
 // Helper to save to LocalStorage
@@ -40,10 +28,6 @@ function saveStorage(key, data) {
 // Update Heart and Bag counts in Navbar
 // Update standard counts (desktop and mobile)
 function updateNavbarCounts() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
     const cart = getStorage(CART_KEY) || [];
     const wishlist = getStorage(WISHLIST_KEY) || [];
 
@@ -58,18 +42,6 @@ function updateNavbarCounts() {
     document.querySelectorAll('.wishlist-count').forEach(el => {
         el.textContent = `(${safeWishlist.length})`;
     });
-<<<<<<< HEAD
-=======
-=======
-    const cart = getStorage(CART_KEY);
-    const wishlist = getStorage(WISHLIST_KEY);
-
-    document.querySelectorAll('.cart-count').forEach(el => {
-        const totalQty = cart.reduce((acc, item) => acc + (item.qty || 1), 0);
-        el.textContent = `(${totalQty})`;
-    });
->>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
 }
 
 // Toggle Wishlist
@@ -92,10 +64,6 @@ function toggleWishlist(product) {
 
 // Add to Cart
 function addToCart(product, qty = 1) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
     if (!product || !product.id) {
         console.warn('addToCart called with invalid product:', product);
         showToast('Unable to add item to bag.');
@@ -126,30 +94,10 @@ function addToCart(product, qty = 1) {
 
     saveStorage(CART_KEY, cart);
     showToast(`"${product.name || 'Item'}" added to bag!`);
-<<<<<<< HEAD
-=======
-=======
-    let cart = getStorage(CART_KEY);
-    const existing = cart.find(item => item.id === product.id && item.color === product.color && item.size === product.size);
-
-    if (existing) {
-        existing.qty += qty;
-    } else {
-        cart.push({ ...product, qty });
-    }
-
-    saveStorage(CART_KEY, cart);
-    showToast(`"${product.name}" added to bag!`);
->>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
 
     window.dispatchEvent(new CustomEvent('cartUpdated', { detail: { cart } }));
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
 /**
  * Extracts product data from an element's data attributes.
  * @param {HTMLElement} el 
@@ -207,11 +155,6 @@ function initAddToCartButtons() {
     });
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
 // Toast notification logic
 function showToast(message) {
     let toast = document.getElementById('app-toast');
@@ -248,10 +191,6 @@ function showToast(message) {
 }
 
 // Initialize counts on load
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
 // Normalize stored values (remove legacy/fake values) and init counts
 function normalizeStorage() {
     try {
@@ -281,12 +220,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateNavbarCounts();
     initAddToCartButtons();
 });
-<<<<<<< HEAD
-=======
-=======
-document.addEventListener('DOMContentLoaded', updateNavbarCounts);
->>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
 
 // Sync counts across tabs
 window.addEventListener('storage', (e) => {
@@ -295,10 +228,6 @@ window.addEventListener('storage', (e) => {
     }
 });
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
 /**
  * Global function to handle quantity changes for product details and product cards.
  * @param {number} delta - The amount to change (e.g., 1 or -1)
@@ -325,8 +254,3 @@ function changeQty(delta, target = 'qty') {
         el.textContent = val;
     }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
->>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
