@@ -31,26 +31,61 @@ function renderCart() {
                     <img src="${item.img}" class="w-full h-full object-contain hover:scale-110 transition-transform">
                 </div>
                 <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
                     <h3 class="font text-gray-900 group-hover:text-amber-800 transition-colors">${item.name}</h3>
                     <div class="flex gap-4 mt-1 text-[11px] uppercase tracking-wider text-gray-400 font">
                         ${item.color ? `<span>Color: <span class="text-gray-600">${item.color}</span></span>` : ''}
                         ${item.size ? `<span>Size: <span class="text-gray-600">${item.size}</span></span>` : ''}
                     </div>
                     <button onclick="removeCartItem(${index})" class="mt-3 text-[10px] uppercase tracking-widest font text-red-500 hover:text-red-700 flex items-center gap-1">
+<<<<<<< HEAD
+=======
+=======
+                    <h3 class="font-bold text-gray-900 group-hover:text-amber-800 transition-colors">${item.name}</h3>
+                    <div class="flex gap-4 mt-1 text-[11px] uppercase tracking-wider text-gray-400 font-bold">
+                        ${item.color ? `<span>Color: <span class="text-gray-600">${item.color}</span></span>` : ''}
+                        ${item.size ? `<span>Size: <span class="text-gray-600">${item.size}</span></span>` : ''}
+                    </div>
+                    <button onclick="removeCartItem(${index})" class="mt-3 text-[10px] uppercase tracking-widest font-bold text-red-500 hover:text-red-700 flex items-center gap-1">
+>>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
+>>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
                         <i class="ri-delete-bin-line"></i> Remove
                     </button>
                 </div>
             </div>
             
+<<<<<<< HEAD
             <div class="md:col-span-2 text-center text-sm font text-gray-600">
+=======
+<<<<<<< HEAD
+            <div class="md:col-span-2 text-center text-sm font text-gray-600">
+=======
+            <div class="md:col-span-2 text-center text-sm font-semibold text-gray-600">
+>>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
+>>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
                 Rs. ${(item.price || 0).toFixed(2)}
             </div>
 
             <div class="md:col-span-2 flex justify-center">
                 <div class="flex items-center border border-gray-200 rounded-lg bg-white overflow-hidden shadow-sm">
+<<<<<<< HEAD
                     <button onclick="changeCartQty(${index}, -1)" class="px-3 py-1 hover:bg-gray-50 text-gray-400 font transition-colors">-</button>
                     <span class="px-4 py-1 text-sm font  min-w-[40px] text-center">${item.qty}</span>
                     <button onclick="changeCartQty(${index}, 1)" class="px-3 py-1 hover:bg-gray-50 text-gray-400 font transition-colors">+</button>
+=======
+<<<<<<< HEAD
+                    <button onclick="changeCartQty(${index}, -1)" class="px-3 py-1 hover:bg-gray-50 text-gray-400 font transition-colors">-</button>
+                    <span class="px-4 py-1 text-sm font  min-w-[40px] text-center">${item.qty}</span>
+                    <button onclick="changeCartQty(${index}, 1)" class="px-3 py-1 hover:bg-gray-50 text-gray-400 font transition-colors">+</button>
+=======
+                    <button onclick="changeCartQty(${index}, -1)" class="px-3 py-1 hover:bg-gray-50 text-gray-400 font-bold transition-colors">-</button>
+                    <span class="px-4 py-1 text-sm font-bold min-w-[40px] text-center">${item.qty}</span>
+                    <button onclick="changeCartQty(${index}, 1)" class="px-3 py-1 hover:bg-gray-50 text-gray-400 font-bold transition-colors">+</button>
+>>>>>>> a02e9116a605f5a1dce6ed2ed19e349fdc1066be
+>>>>>>> 6748542d44031f4cf9c19a9dd73465b82c4c46aa
                 </div>
             </div>
 
