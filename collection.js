@@ -7,7 +7,8 @@ const allProducts = [
         originalPrice: 35.00,
         discount: 57,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300",
-        material: "Gold"
+        material: "Gold",
+        inStock: true
     },
     {
         id: "diamond-ring-chic",
@@ -16,7 +17,8 @@ const allProducts = [
         originalPrice: 40.00,
         discount: 45,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-56.jpg?v=1741670785&width=300",
-        material: "Gold"
+        material: "Gold",
+        inStock: true
     },
     {
         id: "gemstone-jhumkas",
@@ -25,7 +27,8 @@ const allProducts = [
         originalPrice: 38.00,
         discount: 52,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-46.jpg?v=1741668328&width=300",
-        material: "Gold"
+        material: "Gold",
+        inStock: false
     },
     {
         id: "drop-gold-earrings",
@@ -34,7 +37,8 @@ const allProducts = [
         originalPrice: 28.00,
         discount: 50,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-41.jpg?v=1741667580&width=300",
-        material: "Gold"
+        material: "Gold",
+        inStock: true
     },
     {
         id: "silver-crescent-necklace",
@@ -43,7 +47,8 @@ const allProducts = [
         originalPrice: 55.00,
         discount: 42,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-50.jpg?v=1741669420&width=300",
-        material: "Silver"
+        material: "Silver",
+        inStock: true
     },
     {
         id: "silver-hoop-earrings",
@@ -52,7 +57,8 @@ const allProducts = [
         originalPrice: 20.00,
         discount: 40,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-01.jpg?v=1741167520&width=300",
-        material: "Silver"
+        material: "Silver",
+        inStock: false
     },
     {
         id: "platinum-diamond-studs",
@@ -61,7 +67,8 @@ const allProducts = [
         originalPrice: 120.00,
         discount: 29,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-15.jpg?v=1741307520&width=300",
-        material: "Platinum"
+        material: "Platinum",
+        inStock: true
     },
     {
         id: "rose-gold-leaf-ring",
@@ -70,7 +77,8 @@ const allProducts = [
         originalPrice: 45.00,
         discount: 38,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-35.jpg?v=1741507520&width=300",
-        material: "Rose Gold"
+        material: "Rose Gold",
+        inStock: true
     },
     {
         id: "silver-bangle-set",
@@ -79,7 +87,8 @@ const allProducts = [
         originalPrice: 70.00,
         discount: 36,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-55.jpg?v=1741670520&width=300",
-        material: "Silver"
+        material: "Silver",
+        inStock: true
     },
     {
         id: "gold-chain-necklace",
@@ -88,7 +97,8 @@ const allProducts = [
         originalPrice: 90.00,
         discount: 33,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-10.jpg?v=1741207520&width=300",
-        material: "Gold"
+        material: "Gold",
+        inStock: false
     },
     {
         id: "gold-ring-classic",
@@ -97,7 +107,8 @@ const allProducts = [
         originalPrice: 44.00,
         discount: 68,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-26.jpg?v=1742444221&width=352",
-        material: "Gold"
+        material: "Gold",
+        inStock: true
     },
     {
         id: "jhumka-new",
@@ -106,7 +117,8 @@ const allProducts = [
         originalPrice: 20.00,
         discount: 25,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-51.jpg?v=1742445540&width=352",
-        material: "Gold"
+        material: "Gold",
+        inStock: true
     },
     {
         id: "diamond-necklace-luxury",
@@ -115,7 +127,8 @@ const allProducts = [
         originalPrice: 85.00,
         discount: 47,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-30.jpg?v=1741550520&width=300",
-        material: "Silver"
+        material: "Silver",
+        inStock: true
     },
     {
         id: "emerald-set",
@@ -124,7 +137,8 @@ const allProducts = [
         originalPrice: 110.00,
         discount: 50,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-54.jpg?v=1741670520&width=300",
-        material: "Platinum"
+        material: "Platinum",
+        inStock: false
     },
     {
         id: "gold-bracelets-elegant",
@@ -133,7 +147,8 @@ const allProducts = [
         originalPrice: 50.00,
         discount: 40,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-51.jpg?v=1741670520&width=300",
-        material: "Gold"
+        material: "Gold",
+        inStock: true
     },
     {
         id: "luxury-gemstone-item",
@@ -142,7 +157,8 @@ const allProducts = [
         originalPrice: 150.00,
         discount: 34,
         img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-15.jpg?v=1741307520&width=300",
-        material: "Platinum"
+        material: "Platinum",
+        inStock: true
     }
 ];
 
@@ -151,6 +167,7 @@ const productGrid = document.getElementById('product-grid');
 const noResults = document.getElementById('no-results');
 const productCount = document.getElementById('product-count');
 const materialFilters = document.querySelectorAll('.material-filter');
+const availabilityFilters = document.querySelectorAll('.availability-filter');
 const priceMinInput = document.getElementById('price-min');
 const priceMaxInput = document.getElementById('price-max');
 const applyPriceBtn = document.getElementById('apply-price');
@@ -168,6 +185,11 @@ function setupEventListeners() {
         checkbox.addEventListener('change', applyFilters);
     });
 
+    // Availability filters
+    availabilityFilters.forEach(checkbox => {
+        checkbox.addEventListener('change', applyFilters);
+    });
+
     // Price filter button
     applyPriceBtn.addEventListener('click', applyFilters);
 
@@ -181,18 +203,34 @@ function applyFilters() {
         .filter(cb => cb.checked)
         .map(cb => cb.value);
 
-    // 2. Price Filter
+    // 2. Availability Filter
+    const selectedAvailability = Array.from(availabilityFilters)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+    // 3. Price Filter
     const minPrice = parseFloat(priceMinInput.value) || 0;
     const maxPrice = parseFloat(priceMaxInput.value) || Infinity;
 
     // Filter Logic
     let filtered = allProducts.filter(product => {
         const matchesMaterial = selectedMaterials.length === 0 || selectedMaterials.includes(product.material);
+
+        // Check availability
+        let matchesAvailability = true;
+        if (selectedAvailability.length > 0 && selectedAvailability.length < 2) {
+            if (selectedAvailability.includes('in-stock')) {
+                matchesAvailability = product.inStock;
+            } else if (selectedAvailability.includes('out-of-stock')) {
+                matchesAvailability = !product.inStock;
+            }
+        }
+
         const matchesPrice = product.price >= minPrice && product.price <= maxPrice;
-        return matchesMaterial && matchesPrice;
+        return matchesMaterial && matchesAvailability && matchesPrice;
     });
 
-    // 3. Sort Filter
+    // 4. Sort Filter
     const sortValue = sortFilter.value;
     if (sortValue === 'price-low') {
         filtered.sort((a, b) => a.price - b.price);
@@ -247,23 +285,27 @@ function createProductCard(product) {
                     <i class="ri-eye-line"></i>
                 </button>
             </div>
+            ${!product.inStock ? `<div class="absolute inset-0 bg-white/60 flex items-center justify-center">
+                <span class="bg-gray-900 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-sm">Sold Out</span>
+            </div>` : ''}
         </div>
         <div class="space-y-2">
             <p class="text-[11px] text-gray-400 uppercase tracking-widest">${product.material}</p>
             <h4 class="text-sm font-semibold text-gray-900 group-hover:text-amber-700 transition-colors">${product.name}</h4>
             <div class="flex items-center justify-center space-x-2">
-                <span class="text-sm font-bold text-amber-800">Rs. ${product.price.toFixed(2)}</span>
+                <span class="text-sm font-bold ${!product.inStock ? 'text-gray-400' : 'text-amber-800'}">Rs. ${product.price.toFixed(2)}</span>
                 ${product.originalPrice ? `<span class="text-xs text-gray-400 line-through">Rs. ${product.originalPrice.toFixed(2)}</span>` : ''}
             </div>
             <div class="pt-4 px-4">
                 <button 
+                    ${!product.inStock ? 'disabled' : ''}
                     data-id="${product.id}" 
                     data-name="${product.name}" 
                     data-price="${product.price}" 
                     data-img="${product.img}"
-                    class="js-add-to-cart w-full border border-gray-900 text-gray-900 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-gray-900 hover:text-white transition-all rounded-sm"
+                    class="${!product.inStock ? 'opacity-50 cursor-not-allowed bg-gray-100' : 'hover:bg-gray-900 hover:text-white js-add-to-cart'} w-full border border-gray-900 text-gray-900 py-3 text-[10px] font-bold uppercase tracking-widest transition-all rounded-sm"
                 >
-                    Add to Cart
+                    ${product.inStock ? 'Add to Cart' : 'Out of Stock'}
                 </button>
             </div>
         </div>
@@ -273,6 +315,7 @@ function createProductCard(product) {
 
 function resetFilters() {
     materialFilters.forEach(cb => cb.checked = false);
+    availabilityFilters.forEach(cb => cb.checked = false);
     priceMinInput.value = '';
     priceMaxInput.value = '';
     sortFilter.value = 'featured';

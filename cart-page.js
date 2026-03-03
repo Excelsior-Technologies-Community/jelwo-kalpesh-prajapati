@@ -76,7 +76,7 @@ function changeCartQty(index, delta) {
 
 function removeCartItem(index) {
     let cart = getStorage(CART_KEY);
-    cart.splice(index, 1);
+    cart.splice(index, 1 );
     saveStorage(CART_KEY, cart);
     renderCart();
 }
