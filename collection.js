@@ -41,6 +41,16 @@ const allProducts = [
         inStock: true
     },
     {
+        id: "pearl-earrings",
+        name: "Simple Pearl earrings",
+        price: 15.00,
+        originalPrice: 35.00,
+        discount: 57,
+        img: "https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=300",
+        material: "Gold",
+        inStock: true
+    },
+    {
         id: "silver-crescent-necklace",
         name: "Silver Crescent Necklace",
         price: 32.00,
